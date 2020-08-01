@@ -1,2 +1,2 @@
 ## About
-This repository is about my portfolio website.
+This repository is about my Personal Portfolio website.
