@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ec5ef47e.css",
+    "main.js": "/static/js/main.764fa491.js",
+    "static/media/aditya-kumar-pic.jpeg": "/static/media/aditya-kumar-pic.3caa86ffeb2f671212fe.jpeg",
+    "index.html": "/index.html",
+    "main.ec5ef47e.css.map": "/static/css/main.ec5ef47e.css.map",
+    "main.764fa491.js.map": "/static/js/main.764fa491.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec5ef47e.css",
+    "static/js/main.764fa491.js"
+  ]
+}
