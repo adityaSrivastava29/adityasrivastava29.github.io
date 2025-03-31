@@ -1,0 +1,20 @@
+.download-resume {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .download-resume.highlight {
+    background-color: #28a745; /* Highlight color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Slightly enlarge */
+  }
+  
+  .download-resume:hover {
+    background-color: #218838; /* Darker highlight on hover */
+    transform: scale(1.15); /* Slightly larger on hover */
+  }
