@@ -24,10 +24,10 @@ const Projects = () => {
                 <li>Enhanced performance through lazy loading and server-side rendering, reducing page load time by 35%.</li>
               </ul>
               <div className="project-links">
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaGithub /> View Code
                 </a>
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaExternalLinkAlt /> Live Demo
                 </a>
               </div>
@@ -48,10 +48,10 @@ const Projects = () => {
                 <li>Deployed the application on AWS with CI/CD pipelines, ensuring smooth delivery and consistent version control.</li>
               </ul>
               <div className="project-links">
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaGithub /> View Code
                 </a>
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaExternalLinkAlt /> Live Demo
                 </a>
               </div>
@@ -72,10 +72,10 @@ const Projects = () => {
                 <li>Deployed the chatbot on Google Cloud Platform, ensuring scalability and reliability during peak usage times.</li>
               </ul>
               <div className="project-links">
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaGithub /> View Code
                 </a>
-                <a href="#" className="btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://adityasrivastava29.github.io/" className="btn" target="_blank" rel="noopener noreferrer">
                   <FaExternalLinkAlt /> Live Demo
                 </a>
               </div>
