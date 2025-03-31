@@ -36,7 +36,7 @@ const Header = () => {
     <header className={scrolled ? 'scrolled' : ''}>
       <div className="container">
         <nav>
-          <div className="logo">Aditya Kumar</div>
+          <div className="logo">Aditya Kumar Srivastava</div>
           <button className="mobile-menu-btn" onClick={toggleMenu}>
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -54,7 +54,7 @@ const Header = () => {
                 download="Resume.pdf" 
                 className="download-resume highlight"
               >
-                Download Resume
+                View Resume
               </a>
             </li>
           </ul>

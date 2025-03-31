@@ -9,13 +9,13 @@ const About = () => {
           <h1>Aditya Kumar</h1>
           <h3>Software Engineer</h3>
           <p>
-            Dynamic Software Engineer with over 2 years of experience delivering innovative, scalable, and high-performance
-            solutions in fast-paced environments. Proficient in full-stack development with expertise in JavaScript, React,
-            Node.js, and Spring Boot, as well as hands-on experience with cloud technologies like AWS.
+            Dynamic Software Engineer with over <strong>2.5 </strong> <strong>years</strong> of experience delivering innovative, scalable, and high-performance
+            solutions in fast-paced environments. Proficient in full-stack development with expertise in <strong>JavaScript</strong>, <strong>React </strong>, 
+            <strong>Node.js</strong>, and Spring Boot, as well as hands-on experience with cloud technologies like  <strong>AWS</strong>.
           </p>
           <p>
-            Adept at developing robust REST APIs, optimizing system performance, and ensuring code quality with tools such as
-            SonarQube and Jest. Known for collaborating within Agile teams, streamlining workflows, and driving
+            Adept at developing robust <strong>REST APIs</strong>, optimizing system performance, and ensuring code quality with tools such as 
+    &nbsp;<strong>SonarQube</strong> and <strong>Jest</strong>. Known for collaborating within Agile teams, streamlining workflows, and driving
             projects to successful on-time completion.
           </p>
           <p>

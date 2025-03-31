@@ -9,7 +9,7 @@ const Education = () => {
         </div>
         
         <div className="education-card">
-          <h3>B.Tech in Computer Science and Engineering</h3>
+          <h3>Bachelor of Technology in Computer Science and Engineering</h3>
           <h4>Noida Institute of Engineering and Technology, Greater Noida</h4>
           <p>August 2018 - August 2022</p>
           <p><strong>CGPA:</strong> 8.4 (Passed with distinction)</p>
