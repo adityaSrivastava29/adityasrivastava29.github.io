@@ -1,6 +1,6 @@
-# Aditya Kumar - Portfolio Website
+# Aditya Kumar Srivastava - Portfolio Website
 
-This is a personal portfolio website built with React to showcase my experience, projects, skills, and certifications.
+This is a personal portfolio website of Aditya Kumar Srivastava built with React to showcase my experience, projects, skills, and certifications.
 
 ## Features
 
@@ -15,6 +15,7 @@ This is a personal portfolio website built with React to showcase my experience,
 
 - React.js
 - CSS3
+- JavaScript
 - GitHub Actions for CI/CD
 - GitHub Pages for hosting
 
@@ -22,8 +23,8 @@ This is a personal portfolio website built with React to showcase my experience,
 
 1. Clone the repository
    ```
-   git clone https://github.com/adityaSrivastava29/portfolio.git
-   cd portfolio
+   git clone https://github.com/adityaSrivastava29/adityasrivastava29.github.io.git
+   cd adityasrivastava29.github.io
    ```
 
 2. Install dependencies
@@ -40,8 +41,11 @@ This is a personal portfolio website built with React to showcase my experience,
 
 ## Deployment
 
-This portfolio is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the main branch.
+This portfolio is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the master branch.
 
 ## License
 
 MIT
+
+## Support
+If you like this portfolio website, please consider giving it a ⭐ on GitHub! Your support is greatly appreciated.
