@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.903114cd.css",
-    "main.js": "/static/js/main.71b63272.js",
+    "main.js": "/static/js/main.11ba64f6.js",
     "static/media/github-foundations.png": "/static/media/github-foundations.7d5749c0be2c1342f215.png",
     "static/media/aditya-kumar-pic.jpeg": "/static/media/aditya-kumar-pic.3caa86ffeb2f671212fe.jpeg",
     "static/media/aws-cda.png": "/static/media/aws-cda.6b2fe0732acede573757.png",
     "static/media/aws-ccp.png": "/static/media/aws-ccp.1d4d9fa250269a5b5067.png",
     "index.html": "/index.html",
     "main.903114cd.css.map": "/static/css/main.903114cd.css.map",
-    "main.71b63272.js.map": "/static/js/main.71b63272.js.map"
+    "main.11ba64f6.js.map": "/static/js/main.11ba64f6.js.map"
   },
   "entrypoints": [
     "static/css/main.903114cd.css",
-    "static/js/main.71b63272.js"
+    "static/js/main.11ba64f6.js"
   ]
 }
