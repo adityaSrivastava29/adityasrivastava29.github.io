@@ -67,13 +67,15 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <ToastContainer />
       <div className="container">
         <div className="section-title">
           <h2>Contact Me</h2>
         </div>
         
         <div className="contact-container">
+          <div>
+            <ToastContainer />
+          </div>
           <div className="contact-info">
             <h3>Get In Touch</h3>
             <p className="contact-description">Feel free to contact me for any work or suggestions below.</p>
