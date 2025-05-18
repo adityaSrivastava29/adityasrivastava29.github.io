@@ -29,7 +29,7 @@
   }
   
   .footer-heading {
-    color: #ff9a8b;
+    color:  #3498db;
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
     position: relative;
@@ -43,7 +43,7 @@
     bottom: 0;
     width: 50px;
     height: 2px;
-    background-color: #ff9a8b;
+    background-color:  #3498db;
   }
   
   .footer-description {
@@ -75,12 +75,12 @@
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: #ff9a8b;
+    background-color: #3498db;
     transition: width 0.3s ease;
   }
   
   .footer-links a:hover {
-    color: #ff9a8b;
+    color: #3498db;
   }
   
   .footer-links a:hover::after {
@@ -107,7 +107,7 @@
   }
   
   .social-links a:hover {
-    background-color: #ff9a8b;
+    background-color: #3498db;
     transform: translateY(-3px);
   }
   
