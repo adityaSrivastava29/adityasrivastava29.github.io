@@ -66,87 +66,80 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-foreground/[0.02]">
       <div className="container">
-        <div className="section-title">
-          <h2>Contact Me</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Contact Me</h2>
         </div>
-        
-        <div className="contact-container">
-          <div>
+
+        <div className="flex flex-wrap gap-10">
+          <div className="flex-1 min-w-[280px]">
             <ToastContainer />
-          </div>
-          <div className="contact-info">
-            <h3>Get In Touch</h3>
-            <p className="contact-description">Feel free to contact me for any work or suggestions below.</p>
-            
-            <div className="contact-details">
-              <div className="contact-item">
-                <FaEnvelope className="contact-icon" />
-                <a href="mailto:adityasrivastava.niet@gmail.com" className="contact-link">
+            <h3 className="text-xl font-semibold">Get In Touch</h3>
+            <p className="text-muted-foreground mt-2">Feel free to contact me for any work or suggestions below.</p>
+
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-primary" />
+                <a href="mailto:adityasrivastava.niet@gmail.com" className="hover:text-primary transition-colors">
                   adityasrivastava.niet@gmail.com
                 </a>
               </div>
-              
-              <div className="contact-item">
-                <FaPhone className="contact-icon" />
-                <a href="tel:+918840591937" className="contact-link">
+              <div className="flex items-center gap-3">
+                <FaPhone className="text-primary" />
+                <a href="tel:+918840591937" className="hover:text-primary transition-colors">
                   +91-8840591937
                 </a>
               </div>
-              
-              <div className="contact-item">
-                <FaLinkedin className="contact-icon" />
-                <a href="https://www.linkedin.com/in/adityakumar29" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <div className="flex items-center gap-3">
+                <FaLinkedin className="text-primary" />
+                <a href="https://www.linkedin.com/in/adityakumar29" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   linkedin.com/in/adityakumar29
                 </a>
               </div>
-              
-              <div className="contact-item">
-                <FaGithub className="contact-icon" />
-                <a href="https://github.com/adityaSrivastava29" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <div className="flex items-center gap-3">
+                <FaGithub className="text-primary" />
+                <a href="https://github.com/adityaSrivastava29" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   github.com/adityaSrivastava29
                 </a>
               </div>
             </div>
           </div>
-          
-          <div className="contact-form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
+
+          <div className="flex-1 min-w-[280px]">
+            <form className="rounded-md border border-border bg-card p-5 shadow-sm" onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label htmlFor="name" className="mb-2 block text-sm font-medium">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="form-control"
+                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   value={formData.name}
                   onChange={handleChange}
                   required
                   placeholder="Your name"
                 />
               </div>
-              
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
+              <div className="mb-4">
+                <label htmlFor="email" className="mb-2 block text-sm font-medium">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="form-control"
+                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   value={formData.email}
                   onChange={handleChange}
                   required
                   placeholder="Your email"
                 />
               </div>
-              
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
+              <div className="mb-4">
+                <label htmlFor="message" className="mb-2 block text-sm font-medium">Message</label>
                 <textarea
                   id="message"
                   name="message"
-                  className="form-control"
+                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring min-h-[120px]"
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -154,10 +147,9 @@ const Contact = () => {
                   rows="5"
                 ></textarea>
               </div>
-              
               <button 
                 type="submit" 
-                className="submit-btn"
+                className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity disabled:opacity-50"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -166,159 +158,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .contact-section {
-          padding: 80px 0;
-          background-color: #f8f9fa;
-        }
-
-        .section-title {
-          text-align: center;
-          margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-          font-size: 2.5rem;
-          color: #2c3e50;
-          margin-bottom: 15px;
-        }
-
-        .title-underline {
-          width: 80px;
-          height: 4px;
-          background: #3498db;
-          margin: 0 auto;
-          border-radius: 2px;
-        }
-
-        .contact-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 40px;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .contact-info {
-          flex: 1;
-          min-width: 300px;
-        }
-
-        .contact-info h3 {
-          font-size: 1.8rem;
-          color: #2c3e50;
-          margin-bottom: 20px;
-        }
-
-        .contact-description {
-          color: #666;
-          margin-bottom: 30px;
-          line-height: 1.6;
-        }
-
-        .contact-details {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .contact-item {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-        }
-
-        .contact-icon {
-          font-size: 1.2rem;
-          color: #3498db;
-        }
-
-        .contact-link {
-          color: #2c3e50;
-          text-decoration: none;
-          transition: color 0.3s ease;
-        }
-
-        .contact-link:hover {
-          color: #3498db;
-        }
-
-        .contact-form-container {
-          flex: 1;
-          min-width: 300px;
-        }
-
-        .contact-form {
-          background: white;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-          margin-bottom: 20px;
-        }
-
-        .form-group label {
-          display: block;
-          margin-bottom: 8px;
-          color: #2c3e50;
-          font-weight: 500;
-        }
-
-        .form-control {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          font-size: 1rem;
-          transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-          outline: none;
-          border-color: #3498db;
-          box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-        }
-
-        textarea.form-control {
-          resize: vertical;
-          min-height: 120px;
-        }
-
-        .submit-btn {
-          background-color: #3498db;
-          color: white;
-          padding: 12px 30px;
-          border: none;
-          border-radius: 5px;
-          font-size: 1rem;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          width: 100%;
-        }
-
-        .submit-btn:hover {
-          background-color: #2980b9;
-        }
-
-        .submit-btn:disabled {
-          background-color: #bdc3c7;
-          cursor: not-allowed;
-        }
-
-        @media (max-width: 768px) {
-          .contact-container {
-            flex-direction: column;
-          }
-          
-          .contact-form {
-            padding: 20px;
-          }
-        }
-      `}</style>
     </section>
   );
 };

@@ -5,9 +5,22 @@
   "homepage": "https://adityasrivastava29.github.io",
   "main": "index.js",
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.11",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-navigation-menu": "^1.2.13",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-switch": "^1.2.5",
+    "@radix-ui/react-tabs": "^1.1.12",
+    "@radix-ui/react-toast": "^1.2.14",
+    "@radix-ui/react-tooltip": "^1.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.537.0",
     "react": "^18.2.0",
     "react-card-flip": "^1.2.3",
     "react-dom": "^18.2.0",
@@ -17,6 +30,7 @@
     "react-scroll": "^1.8.9",
     "react-toastify": "^11.0.5",
     "react-typed": "^2.0.12",
+    "tailwind-merge": "^3.3.1",
     "web-vitals": "^3.4.0"
   },
   "scripts": {
@@ -46,6 +60,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
