@@ -1,167 +1,155 @@
 import React from 'react';
+import { skills } from '../data/skills';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Programming Languages",
-      skills: [
-        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-        { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-        { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
-      ]
-    },
-    {
-      title: "Backend Technologies",
-      skills: [
-        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Spring", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-        { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-        { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "Hibernate", icon: "https://hibernate.org/images/hibernate-logo.svg" },
-        { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "GraphQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
-        { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" }
-      ]
-    },
-    {
-      title: "Frontend Technologies",
-      skills: [
-        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Vue", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
-        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-        { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
-        { name: "Jest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" }
-      ]
-    },
-    {
-      title: "Developer Tools",
-      skills: [
-        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-        { name: "Azure DevOps", icon: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" },
-        { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-        { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "IntelliJ", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" }
-      ]
-    }
-  ];
+  const skillCategories = skills.map((c) => ({ title: c.title, skills: c.items }));
 
   return (
-    <section id="skills">
+    <section id="skills" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 -z-10">
+        <motion.div 
+          className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
+          animate={{ 
+            x: [0, 20, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-pink-500/10 to-orange-500/10 rounded-full blur-xl"
+          animate={{ 
+            x: [0, -30, 0],
+            y: [0, 30, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+      </div>
+
       <div className="container">
-        <div className="section-title">
-          <h2>Technical Skills</h2>
-        </div>
-        
-        <div className="skills-container">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+            Technical Skills
+          </h2>
+        </motion.div>
+
+        <div className="grid gap-6 md:grid-cols-2">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
-              <h3>{category.title}</h3>
-              <div className="skill-grid">
+            <motion.div 
+              key={index} 
+              className="relative rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+              }}
+            >
+              {/* Floating accent */}
+              <motion.div 
+                className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-primary to-purple-500 rounded-full opacity-60"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.6, 0.8, 0.6]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              <h3 className="text-lg font-semibold mb-6 relative pb-3">
+                <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  {category.title}
+                </span>
+                <motion.div 
+                  className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-primary to-purple-500"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                />
+              </h3>
+              
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-icon">
-                      <img src={skill.icon} alt={skill.name} />
+                  <motion.div 
+                    key={skillIndex} 
+                    className="group relative"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.3, 
+                      delay: (index * 0.1) + (skillIndex * 0.05) 
+                    }}
+                    whileHover={{ 
+                      scale: 1.1,
+                      rotate: [0, -5, 5, 0]
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <div className="relative">
+                      {/* Glow effect on hover */}
+                      <motion.div 
+                        className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        animate={{ 
+                          scale: [1, 1.1, 1],
+                          opacity: [0, 0.3, 0]
+                        }}
+                        transition={{ 
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+                      
+                      <div className="relative h-16 w-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-card to-muted/50 border border-border/50 group-hover:border-primary/50 transition-all duration-300 group-hover:shadow-lg">
+                        <motion.img 
+                          src={skill.icon} 
+                          alt={skill.name} 
+                          className="max-h-8 max-w-8 transition-transform duration-300 group-hover:scale-110" 
+                          loading="lazy"
+                          whileHover={{ rotate: 360 }}
+                          transition={{ duration: 0.6 }}
+                        />
+                      </div>
                     </div>
-                    <span className="skill-name">{skill.name}</span>
-                  </div>
+                    
+                    <motion.span 
+                      className="block text-center text-xs text-muted-foreground group-hover:text-foreground transition-colors duration-300 mt-2"
+                      whileHover={{ y: -2 }}
+                    >
+                      {skill.name}
+                    </motion.span>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        .skills-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 30px;
-          justify-content: space-between;
-        }
-        
-        .skill-category {
-          flex: 1;
-          min-width: 250px;
-          background-color: white;
-          border-radius: var(--border-radius);
-          padding: 20px;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s;
-        }
-        
-        .skill-category:hover {
-          transform: translateY(-5px);
-        }
-        
-        .skill-category h3 {
-          color: var(--primary-color);
-          margin-bottom: 15px;
-          position: relative;
-          padding-bottom: 10px;
-        }
-        
-        .skill-category h3::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 40px;
-          height: 3px;
-          background-color: var(--primary-color);
-        }
-        
-        .skill-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-          gap: 15px;
-        }
-        
-        .skill-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        
-        .skill-icon {
-          width: 50px;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 8px;
-        }
-        
-        .skill-icon img {
-          max-width: 100%;
-          max-height: 100%;
-        }
-        
-        .skill-name {
-          font-size: 0.9rem;
-          font-weight: 500;
-        }
-        
-        @media (max-width: 992px) {
-          .skill-grid {
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .skills-container {
-            flex-direction: column;
-          }
-          
-          .skill-category {
-            width: 100%;
-          }
-        }
-      `}</style>
     </section>
   );
 };

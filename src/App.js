@@ -1,20 +1,21 @@
 // src/App.js
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Education from './components/Education';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './styles.css';
+import { SkeletonGrid } from './components/ui/skeleton';
+import './index.css';
+const Experience = React.lazy(() => import('./components/Experience'));
+const Projects = React.lazy(() => import('./components/Projects'));
+const Skills = React.lazy(() => import('./components/Skills'));
+const Education = React.lazy(() => import('./components/Education'));
+const Certifications = React.lazy(() => import('./components/Certifications'));
+const Contact = React.lazy(() => import('./components/Contact'));
 
 function App() {
   return (
-    <div className="app">
+    <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Aditya Kumar Srivastava - Software Engineer</title>
         <meta name="description" content="Welcome to Aditya Kumar Srivastava's portfolio website. I'm Aditya Kumar Srivastava, a passionate software developer showcasing my projects, skills, and experience." />
@@ -49,12 +50,14 @@ function App() {
       <Header />
       <div className="main-content">
         <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Certifications />
-        <Contact />
+        <Suspense fallback={<div className="container py-16"><SkeletonGrid count={6} /></div>}>
+          <Experience />
+          <Projects />
+          <Skills />
+          <Education />
+          <Certifications />
+          <Contact />
+        </Suspense>
       </div>
       <Footer />
     </div>
