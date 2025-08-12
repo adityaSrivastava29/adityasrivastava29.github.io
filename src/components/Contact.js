@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -83,12 +83,6 @@ const Contact = () => {
                 <FaEnvelope className="text-primary" />
                 <a href="mailto:adityasrivastava.niet@gmail.com" className="hover:text-primary transition-colors">
                   adityasrivastava.niet@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaPhone className="text-primary" />
-                <a href="tel:+918840591937" className="hover:text-primary transition-colors">
-                  +91-8840591937
                 </a>
               </div>
               <div className="flex items-center gap-3">

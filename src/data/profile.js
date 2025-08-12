@@ -10,7 +10,6 @@ export const profile = {
   image: adityaPic,
   social: {
     email: 'adityasrivastava.niet@gmail.com',
-    phone: '+918840591937',
     linkedin: 'https://www.linkedin.com/in/adityakumar29',
     github: 'https://github.com/adityaSrivastava29',
   },
