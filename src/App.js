@@ -38,7 +38,8 @@ function App() {
             "url": "https://adityasri.in",
             "sameAs": [
               "https://github.com/adityasrivastava29",
-              "https://www.linkedin.com/in/adityasrivastava29/"
+              "https://www.linkedin.com/in/adityakumar29/",
+              "https://x.com/adityasri_in"
             ],
             "jobTitle": "Software Engineer",
             "description": "Portfolio website of Aditya Kumar Srivastava, Software Engineer. Projects, skills, experience, and contact information."
