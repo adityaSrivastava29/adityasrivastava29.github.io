@@ -17,17 +17,44 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Aditya Kumar Srivastava - Software Engineer</title>
-        <meta name="description" content="Welcome to Aditya Kumar Srivastava's portfolio website. I'm Aditya Kumar Srivastava, a passionate software developer showcasing my projects, skills, and experience." />
-        <meta name="keywords" content="Adityasri, AdityaSri, adityasri.in, Aditya Kumar Srivastava,adityasri portfolio, Software Engineer" />
+        <title>
+          Aditya Kumar Srivastava - Software Engineer
+        </title>
+        <meta
+          name="description"
+          content="Aditya Kumar Srivastava — Java Full Stack Developer with 3.5+ years building enterprise-grade applications using Java, Spring Boot, React, PostgreSQL, Redis, and AWS. AWS Certified Developer."
+        />
+        <meta
+          name="keywords"
+          content="Adityasri, AdityaSri, adityasri.in, Aditya Kumar Srivastava,adityasri portfolio, aditya kumar portfolio, Software Engineer, Aditya Kumar Srivastava, Java Full Stack Developer, Spring Boot Developer, Java Developer India, React Developer, AWS Certified Developer, Microservices Architecture, REST API Design, PostgreSQL, Redis Caching, Spring Security, JUnit Mockito, Cognizant Developer, Software Engineer Noida, adityasri.in, Spring AI"
+        />
         <meta name="author" content="Aditya Kumar Srivastava" />
-        <meta property="og:title" content="Aditya Kumar Srivastava - Portfolio" />
-        <meta property="og:description" content="Welcome to my portfolio website. Explore my projects, skills, and professional experience." />
+        <meta
+          property="og:title"
+          content="Aditya Kumar Srivastava — Java Full Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Java Full Stack Developer specializing in Spring Boot, React, PostgreSQL & AWS. 3.5+ years of enterprise experience. Explore projects, skills & certifications."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adityasri.in" />
+        <meta
+          property="og:site_name"
+          content="Aditya Kumar Srivastava Portfolio"
+        />
+        <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Aditya Kumar Srivastava - Portfolio" />
-        <meta name="twitter:description" content="Welcome to my portfolio website. Explore my projects, skills, and professional experience." />
+        <meta name="twitter:site" content="@adityasri_in" />
+        <meta name="twitter:creator" content="@adityasri_in" />
+        <meta
+          name="twitter:title"
+          content="Aditya Kumar Srivastava — Java Full Stack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Java Full Stack Developer with 3.5+ years in Spring Boot, React, PostgreSQL & AWS. View my portfolio."
+        />
         <link rel="canonical" href="https://adityasri.in" />
         {/* SEO: Structured Data for Google */}
         <script type="application/ld+json">{`
@@ -37,21 +64,48 @@ function App() {
             "name": "Aditya Kumar Srivastava",
             "url": "https://adityasri.in",
             "sameAs": [
-              "https://github.com/adityasrivastava29",
-              "https://www.linkedin.com/in/adityakumar29/",
+              "https://github.com/adityaSrivastava29",
+              "https://www.linkedin.com/in/adityakumar29",
               "https://x.com/adityasri_in"
             ],
-            "jobTitle": "Software Engineer",
-            "description": "Portfolio website of Aditya Kumar Srivastava, Software Engineer. Projects, skills, experience, and contact information."
+            "jobTitle": "Software Engineer | Java Full Stack Developer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cognizant Technology Solutions"
+            },
+            "knowsAbout": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "AWS", "Microservices", "REST API", "Docker", "CI/CD"],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Noida Institute of Engineering and Technology"
+            },
+            "description": "Java Full Stack Developer with 3.5+ years of experience delivering enterprise-grade applications using Java, Spring Boot, React, and PostgreSQL. AWS Certified Developer.",
+            "email": "adityasrivastava.niet@gmail.com"
           }
         `}</script>
-        {/* SEO: Robots meta tag */}
-        <meta name="robots" content="index, follow" />
+        {/* Structured Data: WebSite (for sitelinks search box) */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Aditya Kumar Srivastava Portfolio",
+            "url": "https://adityasri.in",
+            "description": "Portfolio of Aditya Kumar Srivastava — Java Full Stack Developer specializing in Spring Boot, React, and AWS."
+          }
+        `}</script>
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
       </Helmet>
       <Header />
       <div className="main-content">
         <About />
-        <Suspense fallback={<div className="container py-16"><SkeletonGrid count={6} /></div>}>
+        <Suspense
+          fallback={
+            <div className="container py-16">
+              <SkeletonGrid count={6} />
+            </div>
+          }>
           <Experience />
           <Projects />
           <Skills />
