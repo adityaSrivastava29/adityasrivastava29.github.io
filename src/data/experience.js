@@ -1,24 +1,25 @@
 export const experience = [
   {
-    title: "Software Engineer",
-    company: "Cognizant, Noida",
+    title: "Java Full Stack Developer",
+    company: "Cognizant Technology Solutions, Noida",
     period: "September 2022 - Present",
     bullets: [
-      "Spearheaded development of scalable REST APIs (Express.js), increasing API performance by 40% and reducing response time by 50ms.",
-      "Designed reusable React components, improving developer productivity by 25%.",
-      "Improved code quality with SonarQube; reduced technical debt and improved maintainability.",
-      "Managed builds with AWS CodeBuild and streamlined deployments.",
-      "Built comprehensive unit tests using Mocha and Jest achieving 95% coverage.",
+      "Developed and delivered 2+ production full-stack applications using Spring Boot, React.js, PostgreSQL, and TypeScript, serving 100,000+ active users with 99.9% uptime.",
+      "Engineered 25+ RESTful APIs with Spring Boot/Spring MVC including authentication, validation, and error handling; achieved 40% improvement in response times via PostgreSQL query optimization and Redis caching.",
+      "Built scalable microservices architecture with Spring Boot and Redis, processing 2M+ events monthly using event-driven design patterns and distributed caching.",
+      "Implemented Redis caching layer for high-traffic endpoints, reducing database load by 65% and improving response times by 50%.",
+      "Developed responsive React.js frontends with Redux state management and TypeScript, integrating seamlessly with Spring Boot backend APIs.",
+      "Automated CI/CD pipelines using Docker, Jenkins, GitHub Actions, and AWS, cutting deployment time from 2 hours to 15 minutes (87% reduction).",
+      "Secured applications using Spring Security with JWT, OAuth2, and RBAC following OWASP standards.",
+      "Achieved 95% code coverage with JUnit 5/Mockito; reduced production bugs by 70% and increased deployment frequency from weekly to daily.",
     ],
   },
   {
-    title: "Genc Next Intern",
-    company: "Cognizant, Noida",
+    title: "Java Developer Intern",
+    company: "Cognizant Technology Solutions, Remote",
     period: "February 2022 - September 2022",
     bullets: [
-      "Trained on Full Stack Java development",
-      "Worked on Springboot application with relational databases such as MySQL",
-      "Created Springboot Microservices and deployed on AWS",
+      "Built 5+ full-stack web applications using Java, Spring Boot, PostgreSQL, and JavaScript with CRUD operations, responsive UI, and optimized backend services.",
     ],
   },
   {

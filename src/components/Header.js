@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { ModeToggle } from './theme/mode-toggle';
 import { cn } from '../lib/utils';
+import resumePdf from '../Assets/Aditya_kumar_Java_full_stack_developer_resume.pdf';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,8 +55,8 @@ const Header = () => {
             <li><a className="hover:text-primary transition-colors" href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
             <li>
               <a 
-                href="https://drive.google.com/file/d/1fldTztMS-MU08XEVPBXLoe1RSHx5kZ7T/view?usp=sharing" 
-                download="Resume.pdf" 
+                href={resumePdf} 
+                download="Aditya_Kumar_Resume.pdf" 
                 className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 Resume
@@ -84,8 +85,8 @@ const Header = () => {
               <li><a className="block hover:text-primary" href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
               <li>
                 <a 
-                  href="https://drive.google.com/file/d/1fldTztMS-MU08XEVPBXLoe1RSHx5kZ7T/view?usp=sharing" 
-                  download="Resume.pdf" 
+                  href={resumePdf} 
+                  download="Aditya_Kumar_Resume.pdf" 
                   className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
                   Resume
