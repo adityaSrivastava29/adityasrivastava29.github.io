@@ -18,7 +18,7 @@ function App() {
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>
-          Aditya Kumar Srivastava - Software Engineer
+          Aditya Kumar Srivastava — Java Full Stack Developer | Spring Boot, React, AWS
         </title>
         <meta
           name="description"
