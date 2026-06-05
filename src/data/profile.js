@@ -15,7 +15,7 @@ export const profile = {
   ],
   image: adityaPic,
   social: {
-    email: "adityasrivastava.niet@gmail.com",
+    email: "adityasri.in@gmail.com",
     linkedin: "https://www.linkedin.com/in/adityakumar29",
     github: "https://github.com/adityaSrivastava29",
     x: "https://x.com/adityasri_in",
