@@ -6,6 +6,7 @@ import { ReactTyped } from 'react-typed';
 import adityaPic from '../Assets/aditya-kumar-pic.jpeg';
 import { profile } from '../data/profile';
 import { motion } from 'framer-motion';
+import { trackGithubClick, trackLinkedinClick } from '../lib/analytics';
 // Tailwind migration: inline classes
 
 const About = () => {
@@ -171,6 +172,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              onClick={() => trackLinkedinClick('About Section')}
               className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}>
@@ -181,6 +183,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              onClick={() => trackGithubClick('About Section')}
               className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.95 }}>

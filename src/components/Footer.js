@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { trackGithubClick, trackLinkedinClick } from "../lib/analytics";
 // Tailwind migration: inline classes
 
 const Footer = () => {
@@ -58,6 +59,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/adityakumar29"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackLinkedinClick('Footer')}
                   aria-label="LinkedIn">
                   <FaLinkedin size={20} />
                 </a>
@@ -68,6 +70,7 @@ const Footer = () => {
                   href="https://github.com/adityaSrivastava29"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackGithubClick('Footer')}
                   aria-label="GitHub">
                   <FaGithub size={20} />
                 </a>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { trackContactSubmit, trackGithubClick, trackLinkedinClick } from "../lib/analytics";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,6 +38,9 @@ const Contact = () => {
       );
 
       if (response.ok) {
+        // Track the submission event
+        trackContactSubmit(formData.email);
+
         toast.success(
           "Thank you for your message! I will get back to you soon.",
           {
@@ -108,6 +112,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/adityakumar29"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackLinkedinClick('Contact Section')}
                   className="hover:text-primary transition-colors">
                   linkedin.com/in/adityakumar29
                 </a>
@@ -118,6 +123,7 @@ const Contact = () => {
                   href="https://github.com/adityaSrivastava29"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackGithubClick('Contact Section')}
                   className="hover:text-primary transition-colors">
                   github.com/adityaSrivastava29
                 </a>

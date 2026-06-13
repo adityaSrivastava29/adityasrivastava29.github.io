@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { ModeToggle } from './theme/mode-toggle';
 import { cn } from '../lib/utils';
 import resumePdf from '../Assets/Aditya_kumar_Java_full_stack_developer_resume.pdf';
+import { trackResumeDownload } from '../lib/analytics';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,6 +58,7 @@ const Header = () => {
               <a 
                 href={resumePdf} 
                 download="Aditya_Kumar_Resume.pdf" 
+                onClick={() => trackResumeDownload('Desktop PDF')}
                 className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 Resume
@@ -87,6 +89,7 @@ const Header = () => {
                 <a 
                   href={resumePdf} 
                   download="Aditya_Kumar_Resume.pdf" 
+                  onClick={() => trackResumeDownload('Mobile PDF')}
                   className="inline-flex h-9 items-center rounded-md border border-border px-3 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
                   Resume
