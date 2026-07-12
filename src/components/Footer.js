@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { trackGithubClick, trackLinkedinClick } from "../lib/analytics";
 // Tailwind migration: inline classes
 
@@ -81,6 +81,16 @@ const Footer = () => {
                   href="mailto:adityasri.in@gmail.com"
                   aria-label="Email">
                   <FaEnvelope size={20} />
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:text-primary transition-colors"
+                  href="https://www.instagram.com/adityasrivastava29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram">
+                  <FaInstagram size={20} />
                 </a>
               </li>
             </ul>

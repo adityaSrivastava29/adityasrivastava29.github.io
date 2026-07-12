@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
 import { ReactTyped } from 'react-typed';
@@ -206,6 +206,16 @@ const About = () => {
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.95 }}>
               <BsTwitterX />
+            </motion.a>
+            <motion.a
+              href={profile.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}>
+              <FaInstagram />
             </motion.a>
           </motion.div>
         </motion.div>

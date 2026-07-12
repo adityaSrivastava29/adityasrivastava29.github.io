@@ -19,5 +19,6 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/adityakumar29",
     github: "https://github.com/adityaSrivastava29",
     x: "https://x.com/adityasri_in",
+    instagram: "https://www.instagram.com/adityasrivastava29",
   },
 };
