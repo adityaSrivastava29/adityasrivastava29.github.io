@@ -8,6 +8,7 @@ import { SkeletonGrid } from "./components/ui/skeleton";
 import { initGA, trackPageView } from "./lib/analytics";
 import "./index.css";
 const Experience = React.lazy(() => import("./components/Experience"));
+const Blog = React.lazy(() => import("./components/Blog"));
 const Projects = React.lazy(() => import("./components/Projects"));
 const Skills = React.lazy(() => import("./components/Skills"));
 const Education = React.lazy(() => import("./components/Education"));
@@ -68,23 +69,30 @@ function App() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Aditya Kumar Srivastava",
+            "alternateName": [
+              "Aditya Software Engineer",
+              "Aditya Srivastava",
+              "Aditya Kumar",
+              "Aditya Full Stack Developer"
+            ],
             "url": "https://adityasri.in",
+            "image": "https://adityasri.in/aditya_kumar_pic.jpg",
             "sameAs": [
               "https://github.com/adityaSrivastava29",
               "https://www.linkedin.com/in/adityakumar29",
               "https://x.com/adityasri_in"
             ],
-            "jobTitle": "Software Engineer | Java Full Stack Developer",
+            "jobTitle": "Software Engineer / Java Full Stack Developer",
             "worksFor": {
               "@type": "Organization",
               "name": "Cognizant Technology Solutions"
             },
-            "knowsAbout": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "AWS", "Microservices", "REST API", "Docker", "CI/CD"],
+            "knowsAbout": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "AWS", "Microservices", "REST API", "Docker", "CI/CD", "Software Engineering", "System Design"],
             "alumniOf": {
               "@type": "CollegeOrUniversity",
               "name": "Noida Institute of Engineering and Technology"
             },
-            "description": "Java Full Stack Developer with 3.5+ years of experience delivering enterprise-grade applications using Java, Spring Boot, React, and PostgreSQL. AWS Certified Developer.",
+            "description": "Aditya Kumar Srivastava is a Software Engineer and Java Full Stack Developer with 3.5+ years of experience delivering enterprise-grade applications using Java, Spring Boot, React, and PostgreSQL.",
             "email": "adityasri.in@gmail.com"
           }
         `}</script>
@@ -112,6 +120,7 @@ function App() {
               <SkeletonGrid count={6} />
             </div>
           }>
+          <Blog />
           <Experience />
           <Projects />
           <Skills />

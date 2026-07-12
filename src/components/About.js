@@ -66,12 +66,20 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}>
-          <motion.h3
-            className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4"
+          <motion.h1
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}>
+            transition={{ duration: 0.5 }}>
+            {profile.name}
+          </motion.h1>
+          <motion.h3
+            className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}>
             <ReactTyped
               strings={profile.titles}
               typeSpeed={50}
@@ -144,7 +152,7 @@ const About = () => {
             <div className="relative w-full max-w-sm overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm shadow-lg group-hover:shadow-xl transition-all duration-500">
               <motion.img
                 src={profile.image || adityaPic}
-                alt="Aditya Kumar"
+                alt="Aditya Kumar Srivastava - Software Engineer & Java Full Stack Developer"
                 className="w-full h-auto"
                 loading="lazy"
                 whileHover={{ scale: 1.02 }}
