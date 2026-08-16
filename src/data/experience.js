@@ -1,8 +1,18 @@
 export const experience = [
   {
+    title: "Software Development Engineer 2",
+    company: "CompuGroup Medical US",
+    companyLink: "https://www.linkedin.com/company/compugroup-medical-usa/about/",
+    period: "July 2026 - Present",
+    bullets: [
+      "Contributing to the development and enhancement of a healthcare software application as part of the CGM APEasy Team.",
+    ],
+  },
+  {
     title: "Java Full Stack Developer",
     company: "Cognizant Technology Solutions, Noida",
-    period: "September 2022 - Present",
+    companyLink: "https://www.cognizant.com",
+    period: "September 2022 - June 2026",
     bullets: [
       "Developed and delivered 2+ production full-stack applications using Spring Boot, React.js, PostgreSQL, and TypeScript, serving 100,000+ active users with 99.9% uptime.",
       "Engineered 25+ RESTful APIs with Spring Boot/Spring MVC including authentication, validation, and error handling; achieved 40% improvement in response times via PostgreSQL query optimization and Redis caching.",
@@ -17,6 +27,7 @@ export const experience = [
   {
     title: "Java Developer Intern",
     company: "Cognizant Technology Solutions, Remote",
+    companyLink: "https://www.cognizant.com",
     period: "February 2022 - September 2022",
     bullets: [
       "Built 5+ full-stack web applications using Java, Spring Boot, PostgreSQL, and JavaScript with CRUD operations, responsive UI, and optimized backend services.",
@@ -25,6 +36,7 @@ export const experience = [
   {
     title: "Software Engineer Intern",
     company: "Apisero, Noida",
+    companyLink: "https://www.linkedin.com/company/apisero/home/",
     period: "August 2022 - October 2022",
     bullets: [],
   },

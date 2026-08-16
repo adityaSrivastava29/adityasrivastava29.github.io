@@ -3,6 +3,7 @@ import adityaPic from "../Assets/aditya-kumar-pic.jpeg";
 export const profile = {
   name: "Aditya Kumar Srivastava",
   titles: [
+    "Software Development Engineer 2",
     "Java Full Stack Developer",
     "Software Engineer",
     "Full Stack Developer",

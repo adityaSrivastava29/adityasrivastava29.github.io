@@ -112,7 +112,18 @@ const Experience = () => {
                         className="text-sm text-primary font-medium"
                         whileHover={{ scale: 1.01 }}
                       >
-                        {exp.company}
+                        {exp.companyLink ? (
+                          <a 
+                            href={exp.companyLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="hover:underline transition-colors duration-200"
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
                       </motion.p>
                     </div>
                     <motion.span 

@@ -24,7 +24,7 @@ const Blog = () => {
               <span>•</span>
               <span><strong>Reading Time:</strong> 3 min read</span>
               <span>•</span>
-              <span><strong>Role:</strong> Software Engineer / Java Full Stack Developer</span>
+              <span><strong>Role:</strong> Software Development Engineer 2</span>
             </div>
           </header>
 
@@ -36,7 +36,7 @@ const Blog = () => {
                 Who is Aditya Kumar Srivastava (Aditya Software Engineer)?
               </h2>
               <p>
-                <strong>Aditya Kumar Srivastava</strong> (commonly searched as <em>Aditya Software Engineer</em> or <em>Aditya Srivastava</em>) is a professional <strong>Java Full Stack Developer</strong> and <strong>Software Engineer</strong> based in India. With over 3.5 years of industry experience, he specializes in building high-scale, enterprise-grade distributed applications. He is currently working as a Software Engineer at Cognizant, delivering resilient digital solutions.
+                <strong>Aditya Kumar Srivastava</strong> (commonly searched as <em>Aditya Software Engineer</em> or <em>Aditya Srivastava</em>) is a professional <strong>Java Full Stack Developer</strong> and <strong>Software Engineer</strong> based in India. With over 3.5 years of industry experience, he specializes in building high-scale, enterprise-grade distributed applications. He is currently working as a Software Development Engineer 2 at CompuGroup Medical US within the CGM APEasy Team, contributing to the development and enhancement of healthcare software applications.
               </p>
             </section>
 
@@ -110,7 +110,7 @@ const Blog = () => {
               "author": {
                 "@type": "Person",
                 "name": "Aditya Kumar Srivastava",
-                "jobTitle": "Software Engineer / Java Full Stack Developer",
+                "jobTitle": "Software Development Engineer 2",
                 "url": "https://adityasri.in"
               },
               "publisher": {
