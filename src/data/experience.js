@@ -1,8 +1,8 @@
 export const experience = [
   {
-    title: "Software Development Engineer 2",
-    company: "CompuGroup Medical US",
-    companyLink: "https://www.linkedin.com/company/compugroup-medical-usa/about/",
+    title: "Software Engineer II",
+    company: "CGM ARIA Health Services",
+    companyLink: "https://www.linkedin.com/company/cgm-aria/about/",
     period: "July 2026 - Present",
     bullets: [
       "Contributing to the development and enhancement of a healthcare software application as part of the CGM APEasy Team.",

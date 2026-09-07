@@ -86,7 +86,7 @@ function App() {
             "jobTitle": "Software Development Engineer 2",
             "worksFor": {
               "@type": "Organization",
-              "name": "CompuGroup Medical US"
+              "name": "CGM ARIA Health Services"
             },
             "knowsAbout": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "AWS", "Microservices", "REST API", "Docker", "CI/CD", "Software Engineering", "System Design"],
             "alumniOf": {
