@@ -7,15 +7,12 @@ const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-EZ5MJSBS
 const isProd = process.env.NODE_ENV === 'production';
 
 /**
- * Initialize GA4 configuration
+ * GA4 is initialized once in public/index.html with send_page_view:false.
+ * Keep this function as a no-op for backward compatibility with existing imports.
  */
 export const initGA = () => {
   if (!isProd) {
     console.log('[Analytics] Development Mode: GA4 Initialization skipped.');
-    return;
-  }
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_MEASUREMENT_ID);
   }
 };
 
@@ -79,6 +76,5 @@ export const trackContactSubmit = (email = 'anonymous') => {
   trackEvent('contact_submit', {
     event_category: 'contact',
     event_label: 'Contact Form Submitted Successfully',
-    contact_email: email,
   });
 };
