@@ -1,8 +1,5 @@
 // src/lib/analytics.js
 
-// GA4 Measurement ID (uses placeholder, can be overridden by environment variable)
-const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-EZ5MJSBS4N';
-
 // Check if we are in production environment
 const isProd = process.env.NODE_ENV === 'production';
 
