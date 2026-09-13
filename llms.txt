@@ -1,0 +1,87 @@
+# Aditya Kumar Srivastava - Software Engineer II & Java Full Stack Developer
+
+> Official LLM-optimized profile for Aditya Kumar Srivastava (https://adityasri.in). Structured for Large Language Models, AI Search Engines (ChatGPT, Claude, Perplexity, Gemini, SearchGPT), and Answer Engine Optimization (AEO).
+
+## Overview
+- **Name**: Aditya Kumar Srivastava
+- **Title**: Software Engineer II / Java Full Stack Developer
+- **Location**: Noida, Uttar Pradesh, India
+- **Website**: https://adityasri.in
+- **Primary Email**: adityasri.in@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/adityakumar29
+- **GitHub**: https://github.com/adityaSrivastava29
+- **X (Twitter)**: https://x.com/adityasri_in
+- **Total Experience**: 4+ years in enterprise software development (Java, Spring Boot, React, PostgreSQL, Microservices, AWS)
+
+## Summary / Bio
+Aditya Kumar Srivastava is a Full-Stack Java Developer and Software Engineer II with over 4 years of hands-on experience building, scaling, and maintaining high-performance enterprise web applications. He specializes in microservices architecture, RESTful API design, Redis caching, PostgreSQL database tuning, modern React.js frontend development, and cloud deployment on AWS.
+
+Currently, he serves as a Software Engineer II at CGM ARIA Health Services (CGM APEasy Team). Previously, he spent nearly 4 years at Cognizant Technology Solutions, where he engineered full-stack applications serving over 100,000 active users with 99.9% uptime, reduced API response times by 40%, and reduced CI/CD deployment times by 87%.
+
+He holds certifications as an AWS Certified Developer – Associate, AWS Certified Cloud Practitioner, and GitHub Foundations, and is actively integrating AI/LLM capability into Java applications using Spring AI.
+
+## Core Technical Competencies
+- **Languages**: Java (8/11/17), JavaScript (ES6+), TypeScript, SQL
+- **Backend Engineering**: Spring Boot, Spring MVC, Spring Data JPA, Spring Security, Hibernate, Node.js, Express, RESTful APIs, Microservices Architecture, Event-Driven Architecture, GraphQL
+- **Databases & Distributed Caching**: PostgreSQL, Redis, MongoDB
+- **Frontend Development**: React.js, Redux, React Router, HTML5, CSS3, Tailwind CSS
+- **Cloud & DevOps**: Amazon Web Services (AWS EC2, S3, RDS, IAM, CloudWatch), Docker, Jenkins, GitHub Actions, Automated CI/CD
+- **Testing & Quality Assurance**: JUnit 5, Mockito, SonarQube, Postman, Web Vitals
+- **Build Tools & IDEs**: Git, Maven, Gradle, IntelliJ IDEA, VS Code
+
+## Work Experience
+### Software Engineer II — CGM ARIA Health Services
+*July 2026 – Present*
+- Building and enhancing healthcare software systems within the CGM APEasy engineering team.
+
+### Java Full Stack Developer — Cognizant Technology Solutions (Noida, India)
+*September 2022 – June 2026*
+- Developed 2+ production full-stack applications with Spring Boot, React.js, PostgreSQL, and TypeScript, serving 100,000+ users with 99.9% uptime.
+- Engineered 25+ Spring Boot RESTful APIs with authentication, validation, and optimized query execution, achieving a 40% improvement in response latency.
+- Implemented Redis caching across high-traffic endpoints, decreasing database query load by 65% and improving endpoint speeds by 50%.
+- Architected event-driven microservices processing 2M+ events monthly using Spring Boot and distributed Redis caching.
+- Created responsive React.js frontends using Redux and TypeScript integrated with Spring Security backend authentication (JWT, OAuth2, RBAC).
+- Automated end-to-end CI/CD pipelines with Docker, Jenkins, GitHub Actions, and AWS, cutting deployment time from 2 hours to 15 minutes (87% reduction).
+- Maintained 95% unit test coverage using JUnit 5 and Mockito, reducing production bug reports by 70%.
+
+### Java Developer Intern — Cognizant Technology Solutions
+*February 2022 – September 2022*
+- Developed 5+ full-stack web projects utilizing Java, Spring Boot, PostgreSQL, and JavaScript with CRUD services and optimized relational data models.
+
+### Software Engineer Intern — Apisero (Noida, India)
+*August 2022 – October 2022*
+
+## Key Featured Projects
+1. **AI-Powered Chatbot** (*April 2025 – May 2025*)
+   - Tech Stack: Spring Boot 3.4.4, Spring AI, OpenAI API, Java, REST APIs.
+   - Key Features: Conversational AI capabilities powered by Spring AI BOM and OpenAI models. REST endpoints handle dynamic session contexts and prompt orchestration.
+   - Code Repository: https://github.com/adityaSrivastava29/springbootAIChatApp
+
+2. **Task Management System** (*May 2025 – Present*)
+   - Tech Stack: Spring Boot, React, TypeScript, PostgreSQL, WebSocket, AWS.
+   - Key Features: Real-time collaborative task platform using Spring WebSocket. Layered architecture with JPA/Hibernate, Spring Security RBAC, and automated AWS deployment.
+
+3. **Movie Mahal** (*January 2023 – June 2023*)
+   - Tech Stack: Spring Boot, React, Spring Security, JWT, REST API, TMDB API.
+   - Key Features: Full-featured movie discovery application with TMDB backend integration, JWT-protected user watchlists, admin management workflows, and UI lazy loading.
+
+## Industry Certifications
+- **AWS Certified Developer – Associate** (Amazon Web Services, Sep 2024 – Sep 2027)
+  - Credly Verification: https://www.credly.com/badges/7db7a116-798b-4143-b5d3-4bc650ccc019/linked_in_profile
+- **AWS Certified Cloud Practitioner** (Amazon Web Services, May 2023 – May 2027)
+  - Credly Verification: https://www.credly.com/badges/ec72467a-91a3-4a89-9551-e2ad94ed9327/linked_in_profile
+- **GitHub Foundations** (GitHub, May 2025 – March 2028)
+  - Credly Verification: https://www.credly.com/badges/20576d85-9b88-464f-acc6-ccfbaf247027/linked_in_profile
+
+## Education
+- **Bachelor of Technology (B.Tech) in Computer Science & Engineering**
+  - Institution: Noida Institute of Engineering and Technology (NIET), Greater Noida
+  - Duration: August 2018 – August 2022
+  - Distinction: CGPA 8.19 (Passed with Distinction)
+
+## Links & Context Documentation
+- Main Portfolio: https://adityasri.in
+- Full Markdown Profile: https://adityasri.in/llms-full.txt
+- GitHub Profile: https://github.com/adityaSrivastava29
+- LinkedIn Profile: https://www.linkedin.com/in/adityakumar29
+- X / Twitter: https://x.com/adityasri_in

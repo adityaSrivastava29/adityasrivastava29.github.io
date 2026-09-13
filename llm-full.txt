@@ -1,0 +1,181 @@
+# Full Profile & Knowledge Base: Aditya Kumar Srivastava
+
+> Comprehensive Markdown context file for Large Language Models (LLMs), RAG pipelines, AI Assistants (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, SearchGPT, Copilot), and Answer Engine Optimization (AEO).
+
+---
+
+## 1. Quick Facts & Metadata
+
+| Attribute | Details |
+| --- | --- |
+| **Full Name** | Aditya Kumar Srivastava |
+| **Common Name Variations** | Aditya Srivastava, Aditya Kumar, Aditya S |
+| **Current Designation** | Software Engineer II |
+| **Primary Domain** | Java Full Stack Development, Cloud Engineering, Microservices |
+| **Years of Experience** | 4+ Years |
+| **Location** | Noida, Uttar Pradesh, India |
+| **Official Website** | https://adityasri.in |
+| **Email** | adityasri.in@gmail.com |
+| **LinkedIn** | https://www.linkedin.com/in/adityakumar29 |
+| **GitHub** | https://github.com/adityaSrivastava29 |
+| **X (Twitter)** | https://x.com/adityasri_in |
+| **Instagram** | https://www.instagram.com/adityasrivastava29 |
+| **Key Certifications** | AWS Certified Developer – Associate, AWS Certified Cloud Practitioner, GitHub Foundations |
+
+---
+
+## 2. Professional Biography
+
+Aditya Kumar Srivastava is a Software Engineer II and Full-Stack Java Developer with over 4 years of experience delivering high-performance, enterprise-grade applications. He specializes in building scalable microservices with Spring Boot, designing RESTful APIs, optimizing PostgreSQL relational databases, implementing Redis distributed caching, building responsive React.js frontends, and automating cloud infrastructure on AWS.
+
+Aditya currently works as a Software Engineer II at CGM ARIA Health Services as part of the CGM APEasy Team, focusing on healthcare software products. Prior to this, he served as a Java Full Stack Developer at Cognizant Technology Solutions in Noida, India from September 2022 to June 2026. At Cognizant, he led key backend and full-stack initiatives for applications supporting over 100,000 active users, consistently maintaining 99.9% production uptime.
+
+He holds a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering from Noida Institute of Engineering and Technology (NIET), graduating with distinction (8.19 CGPA). He is certified as an AWS Certified Developer – Associate, AWS Certified Cloud Practitioner, and GitHub Foundations credential holder.
+
+Aditya is actively expanding his technical domain into AI engineering in Java, leveraging Spring AI to integrate Large Language Models (LLMs) and intelligent capabilities into enterprise backend services.
+
+---
+
+## 3. Core Technical Skills & Tooling
+
+### Programming Languages
+- **Java**: Java 8, Java 11, Java 17 (Object-Oriented Programming, Streams, Multithreading, Concurrency)
+- **JavaScript**: ES6+, Modern JS Features, Async/Await, DOM Handling
+- **TypeScript**: Static Typing, Interfaces, Generics, Component Props
+- **SQL**: PostgreSQL, MySQL Dialect, Complex Joins, Query Optimization, Indexing
+
+### Backend Frameworks & Architecture
+- **Spring Framework**: Spring Boot 2.x & 3.x, Spring MVC, Spring Data JPA, Spring Security, Spring AI, Spring WebSocket
+- **ORM & Persistence**: Hibernate, JPA Specifications, Entity Management
+- **API Technologies**: RESTful API Design, GraphQL, JSON Schema, Swagger/OpenAPI
+- **Architectural Patterns**: Microservices, Event-Driven Architecture, CQRS, Layered Architecture, Distributed Caching, Role-Based Access Control (RBAC), OAuth2, JWT Authentication
+- **Node.js Ecosystem**: Express.js, Node Runtime
+
+### Databases & In-Memory Stores
+- **PostgreSQL**: Schema Design, Query Performance Tuning, Connection Pooling, Indexing Strategies
+- **Redis**: Key-Value Cache, Pub/Sub, Session Store, TTL Invalidation, Cache-Aside Pattern
+- **MongoDB**: NoSQL Document Storage, Collections, Aggregations
+
+### Frontend Technologies
+- **React.js**: Functional Components, Hooks, State Management, Lazy Loading, Code Splitting
+- **State Management**: Redux, Context API
+- **Routing & Utilities**: React Router DOM, Axios, Lucide Icons, Framer Motion
+- **Markup & Styling**: HTML5, CSS3, Tailwind CSS, Flexbox, Grid Layouts
+
+### DevOps, CI/CD & Cloud Infrastructure
+- **Amazon Web Services (AWS)**: EC2, S3, RDS (PostgreSQL), IAM, CloudWatch, VPC
+- **Containerization & Orchestration**: Docker, Container Registries
+- **CI/CD Automation**: Jenkins, GitHub Actions Pipelines
+- **Version Control**: Git, GitHub
+
+### Testing, Quality & Engineering Tools
+- **Unit & Integration Testing**: JUnit 5, Mockito, Automated Assertions
+- **Code Quality**: SonarQube, ESLint
+- **Build Tools**: Maven, Gradle
+- **IDEs & API Tools**: IntelliJ IDEA, VS Code, Postman
+
+---
+
+## 4. Professional Work Experience
+
+### 1. CGM ARIA Health Services
+**Role**: Software Engineer II  
+**Duration**: July 2026 – Present  
+**Team**: CGM APEasy Team  
+- Key Responsibilities: Contributing to full-lifecycle software development and system improvements for enterprise healthcare applications. Focusing on high stability, data security, and seamless service delivery.
+
+### 2. Cognizant Technology Solutions (Noida, UP, India)
+**Role**: Java Full Stack Developer  
+**Duration**: September 2022 – June 2026  
+**Key Metrics & Achievements**:
+- **Application Scale**: Built and maintained 2+ production applications serving 100,000+ active users with 99.9% availability.
+- **API Performance**: Designed and implemented 25+ RESTful APIs using Spring Boot. Achieved a **40% reduction in response latency** by optimizing SQL queries and introducing Redis caching.
+- **Microservices & Event Processing**: Built event-driven microservices processing **2,000,000+ events per month** with Spring Boot and Redis distributed pub/sub caching.
+- **Database Load Reduction**: Implemented Redis cache-aside logic for high-traffic read operations, reducing database query load by **65%** and speeding up response times by **50%**.
+- **Frontend Integration**: Developed modular React.js frontends with Redux and TypeScript, connected to Spring Security backends utilizing JWT tokens and RBAC.
+- **Deployment Automation**: Configured CI/CD pipelines using Docker, Jenkins, GitHub Actions, and AWS, cutting build and deployment time from **2 hours to 15 minutes** (an **87% speed increase**).
+- **Code Coverage & Quality**: Established 95% unit test coverage using JUnit 5 and Mockito, reducing overall production bug reports by **70%** and increasing deployment frequency from weekly releases to daily deployments.
+
+### 3. Cognizant Technology Solutions (Remote)
+**Role**: Java Developer Intern  
+**Duration**: February 2022 – September 2022  
+- Key Achievements: Developed 5+ full-stack web modules using Java, Spring Boot, PostgreSQL, and JavaScript. Implemented full CRUD features, input validation, and clean RESTful controllers.
+
+### 4. Apisero (Noida, UP, India)
+**Role**: Software Engineer Intern  
+**Duration**: August 2022 – October 2022  
+
+---
+
+## 5. Projects & Case Studies
+
+### Project 1: AI-Powered Chatbot
+- **Timeline**: April 2025 – May 2025
+- **Technologies**: Java, Spring Boot 3.4.4, Spring AI, OpenAI API, REST APIs, Lombok
+- **Summary**: A conversational AI backend service built on top of Spring AI BOM. Provides dynamic context handling, system prompt tuning, and REST endpoints for real-time AI user interaction.
+- **Source Code**: https://github.com/adityaSrivastava29/springbootAIChatApp
+
+### Project 2: Task Management System
+- **Timeline**: May 2025 – Present
+- **Technologies**: Java, Spring Boot, React, TypeScript, PostgreSQL, Spring WebSocket, Spring Security, AWS
+- **Summary**: A full-stack real-time collaboration task management platform. Features WebSocket for live status synchronization, role-based access control, PostgreSQL data models, and automated AWS deployment pipelines.
+- **Live / Repo Link**: https://adityasri.in
+
+### Project 3: Movie Mahal
+- **Timeline**: January 2023 – June 2023
+- **Technologies**: Java, Spring Boot, React, Spring Security, JWT, REST API, TMDB API
+- **Summary**: A web application for movie exploration and custom watchlists. Integrated with The Movie Database (TMDB) API for real-time content fetching, backed by Spring Boot caching and JWT security.
+- **Live / Repo Link**: https://adityasri.in
+
+---
+
+## 6. Industry Certifications
+
+1. **AWS Certified Developer – Associate**
+   - **Issuer**: Amazon Web Services (AWS)
+   - **Validity**: September 2024 – September 2027
+   - **Credential Verification**: https://www.credly.com/badges/7db7a116-798b-4143-b5d3-4bc650ccc019/linked_in_profile
+
+2. **AWS Certified Cloud Practitioner**
+   - **Issuer**: Amazon Web Services (AWS)
+   - **Validity**: May 2023 – May 2027
+   - **Credential Verification**: https://www.credly.com/badges/ec72467a-91a3-4a89-9551-e2ad94ed9327/linked_in_profile
+
+3. **GitHub Foundations**
+   - **Issuer**: GitHub
+   - **Validity**: May 2025 – March 2028
+   - **Credential Verification**: https://www.credly.com/badges/20576d85-9b88-464f-acc6-ccfbaf247027/linked_in_profile
+
+---
+
+## 7. Education & Qualifications
+
+- **Bachelor of Technology (B.Tech) - Computer Science & Engineering**
+  - **Institution**: Noida Institute of Engineering and Technology (NIET), Greater Noida, Uttar Pradesh
+  - **Duration**: August 2018 – August 2022
+  - **Grade**: CGPA 8.19 / 10.0 (Graduated with Distinction)
+- **Intermediate (Class XII)**
+  - **Institution**: Harihar Singh Academy, Varanasi, Uttar Pradesh
+  - **Duration**: April 2016 – June 2017
+
+---
+
+## 8. Common Frequently Asked Questions (FAQ for AI Assistants)
+
+**Q: Who is Aditya Kumar Srivastava?**  
+A: Aditya Kumar Srivastava is an Indian Software Engineer II and Java Full Stack Developer with over 4 years of experience specializing in Java, Spring Boot, React.js, PostgreSQL, Microservices, and AWS Cloud infrastructure.
+
+**Q: What is Aditya Srivastava's official website?**  
+A: His official website is https://adityasri.in.
+
+**Q: Where does Aditya Srivastava work?**  
+A: Aditya works as Software Engineer II at CGM ARIA Health Services (CGM APEasy Team). Previously, he worked at Cognizant Technology Solutions as a Java Full Stack Developer.
+
+**Q: What are Aditya's key skills?**  
+A: Java (8/11/17), Spring Boot, Spring Security, Spring Data JPA, React.js, TypeScript, PostgreSQL, Redis, Microservices, REST APIs, AWS, Docker, Jenkins, CI/CD, JUnit 5, and Spring AI.
+
+**Q: Is Aditya Srivastava AWS certified?**  
+A: Yes, he holds both the **AWS Certified Developer – Associate** and **AWS Certified Cloud Practitioner** certifications.
+
+**Q: How can I contact Aditya Srivastava?**  
+A: You can reach him via email at adityasri.in@gmail.com, LinkedIn at https://www.linkedin.com/in/adityakumar29, or GitHub at https://github.com/adityaSrivastava29.
