@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 import { trackContactSubmit, trackGithubClick, trackLinkedinClick } from "../lib/analytics";
 
 const Contact = () => {
@@ -38,7 +39,6 @@ const Contact = () => {
       );
 
       if (response.ok) {
-        // Track the submission event
         trackContactSubmit(formData.email);
 
         toast.success(
@@ -52,7 +52,6 @@ const Contact = () => {
             draggable: true,
           }
         );
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -79,120 +78,172 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-16 sm:py-20 lg:py-24 bg-foreground/[0.02]">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-            Contact Me
+    <section id="contact" className="py-20 sm:py-24 bg-[#F7F0E6] dark:bg-[#1A1412] text-[#2B231D] dark:text-[#F4ECE3] transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ToastContainer />
+        <motion.div 
+          className="text-center max-w-2xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-[#5C4033] dark:text-[#E6C594] text-xs font-bold uppercase tracking-widest block mb-2 font-sans">
+            Let's Collaborate
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
+            Get In Touch
           </h2>
-        </div>
+          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+            Have a project in mind, an engineering query, or want to discuss full-stack & cloud architecture? Send a note below.
+          </p>
+        </motion.div>
 
-        <div className="flex flex-wrap gap-10">
-          <div className="flex-1 min-w-[280px]">
-            <ToastContainer />
-            <h3 className="text-xl font-semibold">Get In Touch</h3>
-            <p className="text-muted-foreground mt-2">
-              Feel free to contact me for any work or suggestions below.
-            </p>
+        <div className="grid gap-8 lg:grid-cols-5 items-start">
+          {/* Direct Contact Details Card */}
+          <motion.div 
+            className="lg:col-span-2 bg-[#EFE6D8] dark:bg-[#251E1A] border border-[#E2D6C5] dark:border-[#382E28] rounded-3xl p-8 shadow-sm flex flex-col justify-between h-full transition-colors duration-300"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div>
+              <h3 className="font-serif text-2xl font-semibold text-[#2B231D] dark:text-[#F4ECE3] mb-3">
+                Direct Channels
+              </h3>
+              <p className="text-[#6B5F56] dark:text-[#B5A699] font-sans text-sm mb-8 leading-relaxed">
+                Reach out directly via email or connect across professional technical networks.
+              </p>
 
-            <div className="mt-6 space-y-4">
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-primary" />
-                <a
-                  href="mailto:adityasri.in@gmail.com"
-                  className="hover:text-primary transition-colors">
-                  adityasri.in@gmail.com
+              <div className="space-y-6">
+                <a 
+                  href="mailto:adityasri.in@gmail.com" 
+                  className="flex items-center gap-4 group p-3.5 bg-[#F7F0E6] dark:bg-[#1A1412] border border-[#E2D6C5] dark:border-[#382E28] rounded-2xl hover:border-[#5C4033] dark:hover:border-[#E6C594] transition-all duration-200"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] flex items-center justify-center text-[#5C4033] dark:text-[#E6C594] group-hover:bg-[#5C4033] dark:group-hover:bg-[#E6C594] group-hover:text-white dark:group-hover:text-[#2B231D] transition-colors">
+                    <FaEnvelope className="text-lg" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-[#8C7A6B] dark:text-[#9E8E81] uppercase font-bold block tracking-wider font-sans">Email</span>
+                    <span className="text-sm font-semibold text-[#2B231D] dark:text-[#F4ECE3] font-sans">adityasri.in@gmail.com</span>
+                  </div>
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaLinkedin className="text-primary" />
-                <a
-                  href="https://www.linkedin.com/in/adityakumar29"
-                  target="_blank"
+
+                <a 
+                  href="https://www.linkedin.com/in/adityakumar29" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackLinkedinClick('Contact Section')}
-                  className="hover:text-primary transition-colors">
-                  linkedin.com/in/adityakumar29
+                  className="flex items-center gap-4 group p-3.5 bg-[#F7F0E6] dark:bg-[#1A1412] border border-[#E2D6C5] dark:border-[#382E28] rounded-2xl hover:border-[#5C4033] dark:hover:border-[#E6C594] transition-all duration-200"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] flex items-center justify-center text-[#5C4033] dark:text-[#E6C594] group-hover:bg-[#5C4033] dark:group-hover:bg-[#E6C594] group-hover:text-white dark:group-hover:text-[#2B231D] transition-colors">
+                    <FaLinkedin className="text-lg" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-[#8C7A6B] dark:text-[#9E8E81] uppercase font-bold block tracking-wider font-sans">LinkedIn</span>
+                    <span className="text-sm font-semibold text-[#2B231D] dark:text-[#F4ECE3] font-sans">linkedin.com/in/adityakumar29</span>
+                  </div>
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaGithub className="text-primary" />
-                <a
-                  href="https://github.com/adityaSrivastava29"
-                  target="_blank"
+
+                <a 
+                  href="https://github.com/adityaSrivastava29" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackGithubClick('Contact Section')}
-                  className="hover:text-primary transition-colors">
-                  github.com/adityaSrivastava29
+                  className="flex items-center gap-4 group p-3.5 bg-[#F7F0E6] dark:bg-[#1A1412] border border-[#E2D6C5] dark:border-[#382E28] rounded-2xl hover:border-[#5C4033] dark:hover:border-[#E6C594] transition-all duration-200"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] flex items-center justify-center text-[#5C4033] dark:text-[#E6C594] group-hover:bg-[#5C4033] dark:group-hover:bg-[#E6C594] group-hover:text-white dark:group-hover:text-[#2B231D] transition-colors">
+                    <FaGithub className="text-lg" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-[#8C7A6B] dark:text-[#9E8E81] uppercase font-bold block tracking-wider font-sans">GitHub</span>
+                    <span className="text-sm font-semibold text-[#2B231D] dark:text-[#F4ECE3] font-sans">github.com/adityaSrivastava29</span>
+                  </div>
                 </a>
               </div>
             </div>
-          </div>
 
-          <div className="flex-1 min-w-[280px]">
-            <form
-              className="rounded-md border border-border bg-card p-5 shadow-sm"
-              onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="mb-2 block text-sm font-medium">
-                  Name
+            <div className="mt-8 pt-6 border-t border-[#E2D6C5]/70 dark:border-[#382E28]/70">
+              <p className="text-xs text-[#8C7A6B] dark:text-[#9E8E81] font-sans italic">
+                Based in Noida, UP, India. Available for full-time opportunities and remote engineering work.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact Form Card */}
+          <motion.div 
+            className="lg:col-span-3 bg-[#EFE6D8] dark:bg-[#251E1A] border border-[#E2D6C5] dark:border-[#382E28] rounded-3xl p-8 shadow-sm transition-colors duration-300"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] mb-2 font-sans">
+                  Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="w-full rounded-2xl border border-[#E2D6C5] dark:border-[#382E28] bg-[#F7F0E6] dark:bg-[#1A1412] px-4 py-3 text-sm font-sans text-[#2B231D] dark:text-[#F4ECE3] focus:outline-none focus:ring-2 focus:ring-[#5C4033] dark:focus:ring-[#E6C594] focus:border-transparent transition-all"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Your name"
+                  placeholder="e.g. Jane Doe"
                 />
               </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-medium">
-                  Email
+
+              <div>
+                <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] mb-2 font-sans">
+                  Your Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="w-full rounded-2xl border border-[#E2D6C5] dark:border-[#382E28] bg-[#F7F0E6] dark:bg-[#1A1412] px-4 py-3 text-sm font-sans text-[#2B231D] dark:text-[#F4ECE3] focus:outline-none focus:ring-2 focus:ring-[#5C4033] dark:focus:ring-[#E6C594] focus:border-transparent transition-all"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="Your email"
+                  placeholder="e.g. jane@example.com"
                 />
               </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-medium">
+
+              <div>
+                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] mb-2 font-sans">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring min-h-[120px]"
+                  className="w-full rounded-2xl border border-[#E2D6C5] dark:border-[#382E28] bg-[#F7F0E6] dark:bg-[#1A1412] px-4 py-3 text-sm font-sans text-[#2B231D] dark:text-[#F4ECE3] focus:outline-none focus:ring-2 focus:ring-[#5C4033] dark:focus:ring-[#E6C594] focus:border-transparent transition-all min-h-[140px]"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder="Your message"
-                  rows="5"></textarea>
+                  placeholder="Share details about your project or inquiry..."
+                  rows="5"
+                ></textarea>
               </div>
+
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity disabled:opacity-50"
-                disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
+                disabled={isSubmitting}
+                className="w-full bg-[#5C4033] text-white hover:bg-[#4A3328] dark:bg-[#E6C594] dark:text-[#2B231D] dark:hover:bg-[#F5D6A0] px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest font-sans inline-flex items-center justify-center gap-2 shadow-md transition-all duration-200 disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <span>Sending Message...</span>
+                ) : (
+                  <>
+                    <FaPaperPlane className="text-xs" />
+                    <span>Send Message</span>
+                  </>
+                )}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -200,3 +251,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

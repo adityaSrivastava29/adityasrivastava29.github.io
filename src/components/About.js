@@ -1,227 +1,173 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaPaperPlane } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-
 import { ReactTyped } from 'react-typed';
 import adityaPic from '../Assets/aditya-kumar-pic.jpeg';
 import { profile } from '../data/profile';
 import { motion } from 'framer-motion';
 import { trackGithubClick, trackLinkedinClick } from '../lib/analytics';
-// Tailwind migration: inline classes
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="container py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      {/* Enhanced background decoration */}
-      <div className="absolute inset-0 -z-10">
-        <motion.div
-          className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-400/10 to-orange-500/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 40, 0],
-            scale: [1, 0.8, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 5,
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-green-400/5 to-blue-500/5 rounded-full blur-2xl"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, 20, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-      </div>
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-[#F7F0E6] dark:bg-[#1A1412] text-[#2B231D] dark:text-[#F4ECE3] relative overflow-hidden transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          
+          {/* Left Text Column */}
+          <motion.div 
+            className="flex-1 text-left"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block text-[#5C4033] dark:text-[#E6C594] text-xs font-bold uppercase tracking-widest bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#42352E] px-3.5 py-1.5 rounded-full mb-4 font-sans">
+              Java Full Stack Engineer
+            </span>
 
-      <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-        <motion.div
-          className="flex-1"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}>
-          <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}>
-            {profile.name}
-          </motion.h1>
-          <motion.h3
-            className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}>
-            <ReactTyped
-              strings={profile.titles}
-              typeSpeed={50}
-              backSpeed={50}
-              backDelay={2000}
-              loop
-              className="typed-text bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent"
-            />
-          </motion.h3>
-          {profile.bio.map((p, i) => (
-            <motion.p
-              key={i}
-              className="mt-3 text-muted-foreground text-lg leading-relaxed"
+            <motion.h2 
+              className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#5C4033] dark:text-[#E6C594] mb-6 min-h-[2rem] flex items-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}>
-              {p}
-            </motion.p>
-          ))}
-        </motion.div>
-        <motion.div
-          className="flex-1 w-full flex flex-col items-center gap-4"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}>
-          <div className="relative group">
-            {/* Enhanced glow effect */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg blur-lg opacity-20"
-              animate={{
-                scale: [1, 1.05, 1],
-                opacity: [0.2, 0.3, 0.2],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-
-            {/* Floating accent dots */}
-            <motion.div
-              className="absolute -top-2 -right-2 w-3 h-3 bg-gradient-to-r from-primary to-purple-500 rounded-full"
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.8, 1, 0.8],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-2 -left-2 w-2 h-2 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full"
-              animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.6, 0.9, 0.6],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-              }}
-            />
-
-            <div className="relative w-full max-w-sm overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm shadow-lg group-hover:shadow-xl transition-all duration-500">
-              <motion.img
-                src={profile.image || adityaPic}
-                alt="Aditya Kumar Srivastava - Software Engineer & Java Full Stack Developer"
-                className="w-full h-auto"
-                loading="lazy"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <ReactTyped
+                strings={profile.titles}
+                typeSpeed={50}
+                backSpeed={50}
+                backDelay={2000}
+                loop
+                className="typed-text font-serif italic text-[#5C4033] dark:text-[#E6C594]"
               />
-            </div>
-          </div>
+            </motion.h2>
 
-          <motion.div
-            className="flex items-center gap-4 text-xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}>
-            <motion.a
-              href={`mailto:${profile.social.email}`}
-              aria-label="Email"
-              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}>
-              <FaEnvelope />
-            </motion.a>
-            <motion.a
-              href={profile.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              onClick={() => trackLinkedinClick('About Section')}
-              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}>
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href={profile.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              onClick={() => trackGithubClick('About Section')}
-              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
-              whileHover={{ scale: 1.1, rotate: -5 }}
-              whileTap={{ scale: 0.95 }}>
-              <FaGithub />
-            </motion.a>
-            <motion.a
-              href={profile.social.x}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="x"
-              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
-              whileHover={{ scale: 1.1, rotate: -5 }}
-              whileTap={{ scale: 0.95 }}>
-              <BsTwitterX />
-            </motion.a>
-            <motion.a
-              href={profile.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300 hover:scale-110 border border-border/50"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}>
-              <FaInstagram />
-            </motion.a>
+            <div className="space-y-4 mb-8">
+              {profile.bio.map((p, i) => (
+                <motion.p 
+                  key={i} 
+                  className="text-[#6B5F56] dark:text-[#B5A699] text-base sm:text-lg font-sans leading-relaxed"
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                >
+                  {p}
+                </motion.p>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <motion.div 
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <a 
+                href="#contact" 
+                className="bg-[#5C4033] text-white hover:bg-[#4A3328] dark:bg-[#E6C594] dark:text-[#2B231D] dark:hover:bg-[#F5D6A0] px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest font-sans inline-flex items-center gap-2 shadow-md transition-all duration-200"
+              >
+                <FaPaperPlane className="text-xs" />
+                <span>Get In Touch</span>
+              </a>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Image & Social Column */}
+          <motion.div 
+            className="w-full lg:w-96 flex flex-col items-center shrink-0"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            {/* Stoneware Card Frame */}
+            <div className="bg-[#EFE6D8] dark:bg-[#251E1A] border border-[#E2D6C5] dark:border-[#382E28] rounded-3xl p-4 shadow-sm relative group w-full max-w-sm transition-colors duration-300">
+              <div className="overflow-hidden rounded-2xl border border-[#E2D6C5] dark:border-[#382E28]">
+                <motion.img 
+                  src={profile.image || adityaPic} 
+                  alt="Java Full Stack Developer" 
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Quick Info Tag inside card */}
+              <div className="mt-4 pt-3 border-t border-[#E2D6C5]/70 dark:border-[#382E28]/70 text-center">
+                <p className="text-xs text-[#8C7A6B] dark:text-[#9E8E81] font-sans font-medium">
+                  AWS Certified Developer • Noida, India
+                </p>
+              </div>
+            </div>
+
+            {/* Social Media Links Bar */}
+            <motion.div 
+              className="flex items-center justify-center gap-3 mt-6 w-full"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <a 
+                href={`mailto:${profile.social.email}`} 
+                aria-label="Email"
+                className="w-11 h-11 rounded-2xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] text-[#EA4335] dark:text-[#EA4335] hover:bg-[#EA4335] hover:text-white hover:border-[#EA4335] flex items-center justify-center transition-all duration-200 shadow-sm"
+              >
+                <FaEnvelope className="text-lg" />
+              </a>
+
+              <a 
+                href={profile.social.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn"
+                onClick={() => trackLinkedinClick('About Section')}
+                className="w-11 h-11 rounded-2xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] text-[#0A66C2] dark:text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] flex items-center justify-center transition-all duration-200 shadow-sm"
+              >
+                <FaLinkedin className="text-lg" />
+              </a>
+
+              <a 
+                href={profile.social.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="GitHub"
+                onClick={() => trackGithubClick('About Section')}
+                className="w-11 h-11 rounded-2xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] text-[#181717] dark:text-[#F4ECE3] hover:bg-[#181717] dark:hover:bg-[#F4ECE3] hover:text-white dark:hover:text-[#181717] hover:border-[#181717] dark:hover:border-[#F4ECE3] flex items-center justify-center transition-all duration-200 shadow-sm"
+              >
+                <FaGithub className="text-lg" />
+              </a>
+
+              <a 
+                href={profile.social.x} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Twitter X"
+                className="w-11 h-11 rounded-2xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] text-[#000000] dark:text-[#F4ECE3] hover:bg-[#000000] dark:hover:bg-[#F4ECE3] hover:text-white dark:hover:text-[#000000] hover:border-[#000000] dark:hover:border-[#F4ECE3] flex items-center justify-center transition-all duration-200 shadow-sm"
+              >
+                <BsTwitterX className="text-lg" />
+              </a>
+
+              <a 
+                href={profile.social.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram"
+                className="w-11 h-11 rounded-2xl bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#382E28] text-[#E4405F] dark:text-[#E4405F] hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] flex items-center justify-center transition-all duration-200 shadow-sm"
+              >
+                <FaInstagram className="text-lg" />
+              </a>
+            </motion.div>
+
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
 };
 
 export default About;
+

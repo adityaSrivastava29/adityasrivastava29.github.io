@@ -1,294 +1,238 @@
-import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
 import { projects } from '../data/projects';
-import { motion } from 'framer-motion';
-import * as Dialog from '@radix-ui/react-dialog';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 
 const Projects = () => {
-  return (
-    <section id="projects" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 -z-10">
-        <motion.div 
-          className="absolute top-20 right-20 w-48 h-48 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-2xl"
-          animate={{ 
-            x: [0, 30, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ 
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-r from-pink-500/5 to-orange-500/5 rounded-full blur-xl"
-          animate={{ 
-            x: [0, -20, 0],
-            y: [0, 20, 0],
-            scale: [1, 0.8, 1]
-          }}
-          transition={{ 
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-      </div>
+  const [selectedProj, setSelectedProj] = useState(null);
 
-      <div className="container">
+  return (
+    <section id="projects" className="py-20 sm:py-24 bg-[#F7F0E6] dark:bg-[#1A1412] text-[#2B231D] dark:text-[#F4ECE3] transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Projects
+          <span className="text-[#5C4033] dark:text-[#E6C594] text-xs font-bold uppercase tracking-widest block mb-2 font-sans">
+            Selected Work
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
+            Featured Engineering Projects
           </h2>
+          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+            Full-stack Web Applications, Spring AI integrations, Microservices, and LLM Tokenizers crafted with focus.
+          </p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {projects.map((proj, idx) => (
-            <motion.div
-              key={idx}
-              className="group relative rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-3"
-              initial={{ opacity: 0, y: 20 }}
+        {/* Project Card Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((proj, index) => (
+            <motion.div 
+              key={proj.id || index}
+              className="bg-[#EFE6D8] dark:bg-[#251E1A] border border-[#E2D6C5] dark:border-[#382E28] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: "0 25px 50px rgba(0,0,0,0.15)"
-              }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {/* Floating accent */}
-              <motion.div 
-                className="absolute -top-3 -right-3 w-6 h-6 bg-gradient-to-r from-primary to-purple-500 rounded-full opacity-70"
-                animate={{ 
-                  scale: [1, 1.3, 1],
-                  opacity: [0.7, 0.9, 0.7]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-
-              {/* Glow effect on hover */}
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-primary/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  opacity: [0, 0.1, 0]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-
-              <div className="relative z-10">
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div>
-                    <motion.h3 
-                      className="text-xl font-semibold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent"
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      {proj.title}
-                    </motion.h3>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      <strong>Period:</strong> {proj.period}
-                    </p>
-                  </div>
-                  <Dialog.Root>
-                    <Dialog.Trigger asChild>
-                      <motion.button 
-                        className="inline-flex h-8 items-center rounded-md border border-border/50 px-3 text-xs bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 text-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hover:scale-105"
-                        aria-label={`View details for ${proj.title}`}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        Details
-                      </motion.button>
-                    </Dialog.Trigger>
-                    <Dialog.Portal>
-                      <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
-                      <Dialog.Content className="fixed left-1/2 top-1/2 w-[90vw] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border/50 bg-card/95 backdrop-blur-md p-6 shadow-2xl focus:outline-none">
-                        <Dialog.Title className="text-lg font-semibold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                          {proj.title}
-                        </Dialog.Title>
-                        <Dialog.Description className="text-sm text-muted-foreground mt-1">
-                          {proj.period}
-                        </Dialog.Description>
-                        <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-muted-foreground">
-                          {proj.bullets.map((b, i) => (
-                            <motion.li 
-                              key={i}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: i * 0.1 }}
-                            >
-                              {b}
-                            </motion.li>
-                          ))}
-                        </ul>
-                        <div className="mt-6 flex flex-wrap gap-3">
-                          {proj.links.code && (
-                            <motion.a 
-                              href={proj.links.code} 
-                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FaGithub /> View Code
-                            </motion.a>
-                          )}
-                          {proj.links.frontend && (
-                            <motion.a 
-                              href={proj.links.frontend} 
-                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FaGithub /> Frontend Code
-                            </motion.a>
-                          )}
-                          {proj.links.backend && (
-                            <motion.a 
-                              href={proj.links.backend} 
-                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FaGithub /> Backend Code
-                            </motion.a>
-                          )}
-                          {proj.links.demo && (
-                            <motion.a 
-                              href={proj.links.demo} 
-                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FaExternalLinkAlt /> Live Demo
-                            </motion.a>
-                          )}
-                        </div>
-                        <Dialog.Close asChild>
-                          <motion.button 
-                            className="absolute right-4 top-4 inline-flex h-8 w-8 items-center justify-center rounded-md border border-border/50 hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-all duration-300"
-                            aria-label="Close dialog"
-                            whileHover={{ scale: 1.1, rotate: 90 }}
-                            whileTap={{ scale: 0.9 }}
-                          >
-                            ×
-                          </motion.button>
-                        </Dialog.Close>
-                      </Dialog.Content>
-                    </Dialog.Portal>
-                  </Dialog.Root>
-                </div>
-                
-                <ul className="mt-4 list-disc pl-5 space-y-2 text-sm text-muted-foreground">
-                  {proj.bullets.slice(0, 2).map((b, i) => (
-                    <motion.li 
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: (idx * 0.1) + (i * 0.1) }}
-                    >
-                      {b}
-                    </motion.li>
-                  ))}
-                </ul>
-                
-                {proj.tags && (
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {proj.tags.map((t, i) => (
-                      <motion.span 
-                        key={i} 
-                        className="inline-flex items-center rounded-md border border-border/50 px-2 py-1 text-[11px] text-muted-foreground bg-gradient-to-r from-muted/30 to-muted/50"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: (idx * 0.1) + (i * 0.05) }}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        {t}
-                      </motion.span>
-                    ))}
+              <div>
+                {/* Project Image Frame */}
+                {proj.image && (
+                  <div className="relative overflow-hidden h-48 border-b border-[#E2D6C5] dark:border-[#382E28] bg-[#E7DDCD] dark:bg-[#1A1412]">
+                    <img 
+                      src={proj.image} 
+                      alt={proj.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
                 )}
-                
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {proj.links.code && (
-                    <motion.a 
-                      href={proj.links.code} 
-                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
+
+                <div className="p-6 sm:p-7">
+                  <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#2B231D] dark:text-[#F4ECE3] mb-3">
+                    {proj.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed mb-6 line-clamp-2">
+                    {proj.description || (proj.bullets && proj.bullets[0])}
+                  </p>
+
+                  {/* Technology Pills */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {proj.technologies && proj.technologies.slice(0, 4).map((tech, techIdx) => (
+                      <span 
+                        key={techIdx} 
+                        className="bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#42352E] text-[#2B231D] dark:text-[#E8D4C8] text-[11px] font-semibold px-3 py-1 rounded-full font-sans"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {proj.technologies && proj.technologies.length > 4 && (
+                      <span className="bg-[#E7DDCD] dark:bg-[#342A24] text-[#8C7A6B] dark:text-[#9E8E81] text-[11px] font-semibold px-2.5 py-1 rounded-full font-sans">
+                        +{proj.technologies.length - 4}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Action Links Footer */}
+              <div className="px-6 pb-6 pt-0 flex items-center justify-between gap-3 border-t border-[#E2D6C5]/60 dark:border-[#382E28]/60 pt-4 mt-auto">
+                <button 
+                  onClick={() => setSelectedProj(proj)}
+                  className="text-xs font-bold text-[#2B231D] dark:text-[#F4ECE3] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors font-sans"
+                >
+                  View Details &rarr;
+                </button>
+
+                <div className="flex items-center gap-2">
+                  {(proj.links?.github || proj.links?.code) && (
+                    <a 
+                      href={proj.links.github || proj.links.code} 
                       target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      rel="noopener noreferrer" 
+                      className="p-2.5 rounded-full bg-[#E7DDCD] dark:bg-[#342A24] text-[#2B231D] dark:text-[#F4ECE3] hover:bg-[#B8AA94] dark:hover:bg-[#4D3F38] transition-colors text-sm"
+                      aria-label="GitHub Repository"
                     >
-                      <FaGithub /> View Code
-                    </motion.a>
+                      <FaGithub />
+                    </a>
                   )}
-                  {proj.links.frontend && (
-                    <motion.a 
-                      href={proj.links.frontend} 
-                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub /> Frontend
-                    </motion.a>
-                  )}
-                  {proj.links.backend && (
-                    <motion.a 
-                      href={proj.links.backend} 
-                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub /> Backend
-                    </motion.a>
-                  )}
-                  {proj.links.demo && (
-                    <motion.a 
+                  {proj.links?.demo && (
+                    <a 
                       href={proj.links.demo} 
-                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
                       target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      rel="noopener noreferrer" 
+                      className="bg-[#5C4033] dark:bg-[#E6C594] text-white dark:text-[#2B231D] hover:bg-[#4A3328] dark:hover:bg-[#F5D6A0] px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider font-sans inline-flex items-center gap-1.5 shadow-sm"
                     >
-                      <FaExternalLinkAlt /> Live Demo
-                    </motion.a>
+                      Demo <FaExternalLinkAlt className="text-[9px]" />
+                    </a>
                   )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Modal View for Project Detail */}
+        <AnimatePresence>
+          {selectedProj && (
+            <motion.div 
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProj(null)}
+            >
+              <motion.div 
+                className="bg-[#F7F0E6] dark:bg-[#201A17] border border-[#E2D6C5] dark:border-[#382E28] text-[#2B231D] dark:text-[#F4ECE3] rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto"
+                initial={{ scale: 0.95, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.95, y: 20 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button 
+                  onClick={() => setSelectedProj(null)}
+                  className="absolute top-6 right-6 p-2 rounded-full bg-[#E7DDCD] dark:bg-[#342A24] text-[#2B231D] dark:text-[#F4ECE3] hover:bg-[#B8AA94] transition-colors"
+                  aria-label="Close dialog"
+                >
+                  <FaTimes />
+                </button>
+
+                <span className="text-[#5C4033] dark:text-[#E6C594] text-xs font-bold uppercase tracking-wider block mb-1 font-sans">
+                  Project Insight
+                </span>
+
+                <h3 className="font-serif text-2xl sm:text-3xl font-semibold mb-4 pr-8">
+                  {selectedProj.title}
+                </h3>
+
+                <p className="text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed mb-6">
+                  {selectedProj.description}
+                </p>
+
+                {(selectedProj.details || selectedProj.bullets) && (
+                  <div className="mb-6 space-y-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] font-sans">
+                      Key Highlights & Architecture:
+                    </h4>
+                    <ul className="space-y-1.5 text-xs text-[#6B5F56] dark:text-[#B5A699] font-sans">
+                      {(selectedProj.details || selectedProj.bullets).map((detail, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-[#5C4033] dark:text-[#E6C594] font-bold">✓</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedProj.technologies && (
+                  <div className="mb-6">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] font-sans mb-3">
+                      Technologies & Stack:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProj.technologies.map((tech, idx) => (
+                        <span 
+                          key={idx} 
+                          className="bg-[#E7DDCD] dark:bg-[#342A24] border border-[#E2D6C5] dark:border-[#42352E] text-[#2B231D] dark:text-[#E8D4C8] text-xs font-semibold px-3 py-1 rounded-full font-sans"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-[#E2D6C5] dark:border-[#382E28]">
+                  {(selectedProj.links?.github || selectedProj.links?.code) && (
+                    <a 
+                      href={selectedProj.links.github || selectedProj.links.code} 
+                      className="bg-[#B8AA94] dark:bg-[#3D322C] text-[#2B231D] dark:text-[#F4ECE3] hover:bg-[#A89A84] dark:hover:bg-[#4A3D36] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub /> Repository
+                    </a>
+                  )}
+                  {selectedProj.links?.frontend && (
+                    <a 
+                      href={selectedProj.links.frontend} 
+                      className="bg-[#B8AA94] dark:bg-[#3D322C] text-[#2B231D] dark:text-[#F4ECE3] hover:bg-[#A89A84] dark:hover:bg-[#4A3D36] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub /> Frontend
+                    </a>
+                  )}
+                  {selectedProj.links?.backend && (
+                    <a 
+                      href={selectedProj.links.backend} 
+                      className="bg-[#B8AA94] dark:bg-[#3D322C] text-[#2B231D] dark:text-[#F4ECE3] hover:bg-[#A89A84] dark:hover:bg-[#4A3D36] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub /> Backend
+                    </a>
+                  )}
+                  {selectedProj.links?.demo && (
+                    <a 
+                      href={selectedProj.links.demo} 
+                      className="bg-[#5C4033] dark:bg-[#E6C594] text-white dark:text-[#2B231D] hover:bg-[#4A3328] dark:hover:bg-[#F5D6A0] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5 shadow-sm" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt className="text-[10px]" /> Live Demo
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
