@@ -1,5 +1,50 @@
 export const projects = [
   {
+    title: "AI Persona Chat",
+    period: "August 2025",
+    bullets: [
+      "Built a modern React frontend and Express/Node backend application for interactive AI persona conversations.",
+      "Features pre-built AI tutor personas like Hitesh Choudhary and Piyush Garg with specialized knowledge bases and custom conversation styles.",
+      "Empowers users to create and customize custom AI personas with distinct personalities, unique system prompts, and expertise areas.",
+      "Designed a responsive user interface with real-time dynamic messaging, chat history management, and smooth persona interaction flows.",
+    ],
+    links: {
+      frontend: "https://github.com/adityaSrivastava29/ai-persona-chat-frontend",
+      backend: "https://github.com/adityaSrivastava29/ai-persona-chat-backend",
+      demo: "https://adityasri.in/ai-persona-chat-frontend/",
+    },
+    tags: [
+      "React",
+      "AI / LLM",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+      "REST API",
+    ],
+  },
+  {
+    title: "Custom Tokenizer App",
+    period: "August 2025",
+    bullets: [
+      "Developed an interactive web application to visualize and understand fundamental LLM text tokenization mechanics.",
+      "Implemented both word-based and character-based tokenization algorithms with real-time text parsing and token mapping.",
+      "Built with React and Vite for high-performance UI rendering, sub-millisecond state updates, and interactive breakdown.",
+      "Designed visual token highlighting, vocabulary metrics, and character-level index analysis for educational insights.",
+    ],
+    links: {
+      code: "https://github.com/adityaSrivastava29/custom-tokenizer-app",
+      demo: "https://adityasri.in/custom-tokenizer-app/",
+    },
+    tags: [
+      "React",
+      "Vite",
+      "AI / LLM",
+      "Tokenization",
+      "JavaScript",
+      "Web App",
+    ],
+  },
+  {
     title: "AI-Powered Chatbot",
     period: "April 2025 - May 2025",
     bullets: [

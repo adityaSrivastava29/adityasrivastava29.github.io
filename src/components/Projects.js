@@ -138,7 +138,7 @@ const Projects = () => {
                             </motion.li>
                           ))}
                         </ul>
-                        <div className="mt-6 flex gap-3">
+                        <div className="mt-6 flex flex-wrap gap-3">
                           {proj.links.code && (
                             <motion.a 
                               href={proj.links.code} 
@@ -149,6 +149,30 @@ const Projects = () => {
                               whileTap={{ scale: 0.95 }}
                             >
                               <FaGithub /> View Code
+                            </motion.a>
+                          )}
+                          {proj.links.frontend && (
+                            <motion.a 
+                              href={proj.links.frontend} 
+                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <FaGithub /> Frontend Code
+                            </motion.a>
+                          )}
+                          {proj.links.backend && (
+                            <motion.a 
+                              href={proj.links.backend} 
+                              className="inline-flex items-center gap-2 rounded-md border border-border/50 px-4 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <FaGithub /> Backend Code
                             </motion.a>
                           )}
                           {proj.links.demo && (
@@ -211,7 +235,7 @@ const Projects = () => {
                   </div>
                 )}
                 
-                <div className="flex gap-3 mt-4">
+                <div className="flex flex-wrap gap-3 mt-4">
                   {proj.links.code && (
                     <motion.a 
                       href={proj.links.code} 
@@ -222,6 +246,30 @@ const Projects = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaGithub /> View Code
+                    </motion.a>
+                  )}
+                  {proj.links.frontend && (
+                    <motion.a 
+                      href={proj.links.frontend} 
+                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaGithub /> Frontend
+                    </motion.a>
+                  )}
+                  {proj.links.backend && (
+                    <motion.a 
+                      href={proj.links.backend} 
+                      className="inline-flex items-center gap-2 rounded-md border border-border/50 px-3 py-2 text-sm bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20 transition-all duration-300" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaGithub /> Backend
                     </motion.a>
                   )}
                   {proj.links.demo && (
