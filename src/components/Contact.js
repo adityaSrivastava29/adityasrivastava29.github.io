@@ -94,7 +94,7 @@ const Contact = () => {
           <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
             Get In Touch
           </h2>
-          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+          <p className="text-[#332721] dark:text-[#D6C7B8] text-base mt-4 font-sans leading-relaxed">
             Have a project in mind, an engineering query, or want to discuss full-stack & cloud architecture? Send a note below.
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ const Contact = () => {
               <h3 className="font-serif text-2xl font-semibold text-[#2B231D] dark:text-[#F4ECE3] mb-3">
                 Direct Channels
               </h3>
-              <p className="text-[#6B5F56] dark:text-[#B5A699] font-sans text-sm mb-8 leading-relaxed">
+              <p className="text-[#332721] dark:text-[#D6C7B8] font-sans text-sm mb-8 leading-relaxed">
                 Reach out directly via email or connect across professional technical networks.
               </p>
 

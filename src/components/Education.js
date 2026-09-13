@@ -57,7 +57,7 @@ const Education = () => {
                     <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#2B231D] dark:text-[#F4ECE3]">
                       {edu.degree}
                     </h3>
-                    <p className="text-[#6B5F56] dark:text-[#B5A699] font-sans text-sm font-medium mt-1">
+                    <p className="text-[#332721] dark:text-[#D6C7B8] font-sans text-sm font-medium mt-1">
                       {edu.institution}
                     </p>
                   </div>

@@ -46,7 +46,7 @@ const About = () => {
               {profile.bio.map((p, i) => (
                 <motion.p 
                   key={i} 
-                  className="text-[#6B5F56] dark:text-[#B5A699] text-base sm:text-lg font-sans leading-relaxed"
+                  className="text-[#332721] dark:text-[#D6C7B8] text-base sm:text-lg font-sans leading-relaxed"
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

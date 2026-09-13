@@ -21,7 +21,7 @@ const Experience = () => {
           <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
             Professional Experience
           </h2>
-          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+          <p className="text-[#332721] dark:text-[#D6C7B8] text-base mt-4 font-sans leading-relaxed">
             Building scalable Java microservices, Spring Boot backends, and cloud solutions across enterprise environments.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ const Experience = () => {
 
                 {/* Achievements List */}
                 {exp.bullets && exp.bullets.length > 0 && (
-                  <ul className="space-y-2.5 mt-4 text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed">
+                  <ul className="space-y-2.5 mt-4 text-sm text-[#332721] dark:text-[#D6C7B8] font-sans leading-relaxed">
                     {exp.bullets.map((bullet, i) => (
                       <li key={i} className="flex items-start gap-2.5">
                         <span className="text-[#5C4033] dark:text-[#E6C594] mt-1 shrink-0">❖</span>

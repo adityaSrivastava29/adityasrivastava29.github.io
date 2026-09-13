@@ -11,7 +11,7 @@ const Footer = () => {
             <h3 className="font-serif text-2xl font-normal text-[#2B231D] dark:text-[#F4ECE3]">
               Aditya Kumar Srivastava
             </h3>
-            <p className="text-xs sm:text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#332721] dark:text-[#D6C7B8] font-sans leading-relaxed">
               Java Full Stack Developer specializing in Spring Boot, React, and AWS Cloud architecture. Crafting resilient systems with intent.
             </p>
           </div>
@@ -22,27 +22,27 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm font-sans">
               <li>
-                <a className="text-[#6B5F56] dark:text-[#B5A699] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#about">
+                <a className="text-[#332721] dark:text-[#D6C7B8] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#about">
                   About Studio
                 </a>
               </li>
               <li>
-                <a className="text-[#6B5F56] dark:text-[#B5A699] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#experience">
+                <a className="text-[#332721] dark:text-[#D6C7B8] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#experience">
                   Experience
                 </a>
               </li>
               <li>
-                <a className="text-[#6B5F56] dark:text-[#B5A699] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#projects">
+                <a className="text-[#332721] dark:text-[#D6C7B8] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#projects">
                   Selected Work
                 </a>
               </li>
               <li>
-                <a className="text-[#6B5F56] dark:text-[#B5A699] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#skills">
+                <a className="text-[#332721] dark:text-[#D6C7B8] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#skills">
                   Capabilities
                 </a>
               </li>
               <li>
-                <a className="text-[#6B5F56] dark:text-[#B5A699] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#certifications">
+                <a className="text-[#332721] dark:text-[#D6C7B8] hover:text-[#5C4033] dark:hover:text-[#E6C594] transition-colors" href="#certifications">
                   Certifications
                 </a>
               </li>

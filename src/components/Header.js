@@ -45,7 +45,7 @@ const Header = () => {
           >
             Aditya Kumar Srivastava
           </button>
-          <ul className="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-[#6B5F56] dark:text-[#B5A699]">
+          <ul className="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-[#332721] dark:text-[#D6C7B8]">
             <li><a className="hover:text-[#2B231D] dark:hover:text-[#F4ECE3] transition-colors" href="#about" onClick={() => scrollToSection('about')}>About</a></li>
             <li><a className="hover:text-[#2B231D] dark:hover:text-[#F4ECE3] transition-colors" href="#experience" onClick={() => scrollToSection('experience')}>Experience</a></li>
             <li><a className="hover:text-[#2B231D] dark:hover:text-[#F4ECE3] transition-colors" href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
@@ -75,7 +75,7 @@ const Header = () => {
       </div>
       {menuOpen && (
         <div className="lg:hidden mt-2 bg-[#EFE6D8] dark:bg-[#251E1A] border border-[#E2D6C5] dark:border-[#382E28] rounded-3xl p-6 shadow-xl">
-          <ul className="flex flex-col gap-3 text-xs font-semibold uppercase tracking-wider text-[#6B5F56] dark:text-[#B5A699]">
+          <ul className="flex flex-col gap-3 text-xs font-semibold uppercase tracking-wider text-[#332721] dark:text-[#D6C7B8]">
             <li><a className="block hover:text-[#2B231D] dark:hover:text-[#F4ECE3]" href="#about" onClick={() => scrollToSection('about')}>About</a></li>
             <li><a className="block hover:text-[#2B231D] dark:hover:text-[#F4ECE3]" href="#experience" onClick={() => scrollToSection('experience')}>Experience</a></li>
             <li><a className="block hover:text-[#2B231D] dark:hover:text-[#F4ECE3]" href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>

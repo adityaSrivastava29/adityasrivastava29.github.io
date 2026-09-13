@@ -21,7 +21,7 @@ const Skills = () => {
           <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
             Crafts & Capabilities
           </h2>
-          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+          <p className="text-[#332721] dark:text-[#D6C7B8] text-base mt-4 font-sans leading-relaxed">
             Technologies, frameworks, and architecture patterns honed through building high-scale production systems.
           </p>
         </motion.div>

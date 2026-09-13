@@ -31,7 +31,7 @@ const Certifications = () => {
           <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
             Certifications & Accreditation
           </h2>
-          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+          <p className="text-[#332721] dark:text-[#D6C7B8] text-base mt-4 font-sans leading-relaxed">
             Industry recognized certifications validating AWS cloud architecture and software delivery.
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ const Certifications = () => {
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#E2D6C5]/70 dark:border-[#382E28]/70 flex items-center justify-between">
-                <span className="text-xs font-sans text-[#6B5F56] dark:text-[#B5A699]">Click card to view preview</span>
+                <span className="text-xs font-sans text-[#332721] dark:text-[#D6C7B8]">Click card to view preview</span>
                 <a 
                   href="https://www.credly.com/badges/7db7a116-798b-4143-b5d3-4bc650ccc019/linked_in_profile" 
                   target="_blank" 
@@ -105,7 +105,7 @@ const Certifications = () => {
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#E2D6C5]/70 dark:border-[#382E28]/70 flex items-center justify-between">
-                <span className="text-xs font-sans text-[#6B5F56] dark:text-[#B5A699]">Click card to view preview</span>
+                <span className="text-xs font-sans text-[#332721] dark:text-[#D6C7B8]">Click card to view preview</span>
                 <a 
                   href="https://www.credly.com/badges/ec72467a-91a3-4a89-9551-e2ad94ed9327/linked_in_profile" 
                   target="_blank" 
@@ -150,7 +150,7 @@ const Certifications = () => {
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#E2D6C5]/70 dark:border-[#382E28]/70 flex items-center justify-between">
-                <span className="text-xs font-sans text-[#6B5F56] dark:text-[#B5A699]">Click card to view preview</span>
+                <span className="text-xs font-sans text-[#332721] dark:text-[#D6C7B8]">Click card to view preview</span>
                 <a 
                   href="https://www.credly.com/badges/20576d85-9b88-464f-acc6-ccfbaf247027/linked_in_profile" 
                   target="_blank" 

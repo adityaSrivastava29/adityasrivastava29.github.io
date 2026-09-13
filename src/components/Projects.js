@@ -22,7 +22,7 @@ const Projects = () => {
           <h2 className="font-serif text-3xl sm:text-4xl font-normal tracking-tight text-[#2B231D] dark:text-[#F4ECE3]">
             Featured Engineering Projects
           </h2>
-          <p className="text-[#6B5F56] dark:text-[#B5A699] text-base mt-4 font-sans leading-relaxed">
+          <p className="text-[#332721] dark:text-[#D6C7B8] text-base mt-4 font-sans leading-relaxed">
             Full-stack Web Applications, Spring AI integrations, Microservices, and LLM Tokenizers crafted with focus.
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ const Projects = () => {
                     {proj.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed mb-6 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-[#332721] dark:text-[#D6C7B8] font-sans leading-relaxed mb-6 line-clamp-2">
                     {proj.description || (proj.bullets && proj.bullets[0])}
                   </p>
 
@@ -149,7 +149,7 @@ const Projects = () => {
                   {selectedProj.title}
                 </h3>
 
-                <p className="text-sm text-[#6B5F56] dark:text-[#B5A699] font-sans leading-relaxed mb-6">
+                <p className="text-sm text-[#332721] dark:text-[#D6C7B8] font-sans leading-relaxed mb-6">
                   {selectedProj.description}
                 </p>
 
@@ -158,7 +158,7 @@ const Projects = () => {
                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] font-sans">
                       Key Highlights & Architecture:
                     </h4>
-                    <ul className="space-y-1.5 text-xs text-[#6B5F56] dark:text-[#B5A699] font-sans">
+                    <ul className="space-y-1.5 text-xs text-[#332721] dark:text-[#D6C7B8] font-sans">
                       {(selectedProj.details || selectedProj.bullets).map((detail, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="text-[#5C4033] dark:text-[#E6C594] font-bold">✓</span>
