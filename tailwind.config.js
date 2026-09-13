@@ -5,7 +5,33 @@ module.exports = {
   theme: {
     container: { center: true, padding: '1rem' },
     extend: {
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        serif: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
       colors: {
+        terracotta: {
+          DEFAULT: '#5C4033',
+          hover: '#4A3328',
+          light: '#E6C594',
+        },
+        stone: {
+          taupe: '#B8AA94',
+          sand: '#E7DDCD',
+        },
+        cream: {
+          canvas: '#F7F0E6',
+          card: '#EFE6D8',
+        },
+        ink: {
+          brown: '#2B231D',
+          muted: '#6B5F56',
+        },
+        warm: {
+          border: '#E2D6C5',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -40,6 +66,8 @@ module.exports = {
         lg: '0.5rem',
         md: 'calc(0.5rem - 2px)',
         sm: 'calc(0.5rem - 4px)',
+        '2xl': '1.5rem',
+        '3xl': '2rem',
       },
       keyframes: {
         'accordion-down': {

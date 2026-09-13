@@ -1,5 +1,38 @@
 export const skills = [
   {
+    title: "AI Craft & Coding Tools",
+    items: [
+      {
+        name: "GitHub Copilot",
+        icon: "https://cdn.simpleicons.org/githubcopilot/6E40C9",
+      },
+      {
+        name: "Claude Code",
+        icon: "https://cdn.simpleicons.org/anthropic/D97757",
+      },
+      {
+        name: "OpenAI Codex",
+        icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310A37F'><path d='M22.28 9.82a6.38 6.38 0 0 0-.53-5.18 6.55 6.55 0 0 0-4.34-3.23 6.38 6.38 0 0 0-5.65 1.4A6.38 6.38 0 0 0 7.4.58 6.55 6.55 0 0 0 3.06 3.8 6.38 6.38 0 0 0 .81 8.44a6.38 6.38 0 0 0 .53 5.18 6.55 6.55 0 0 0 4.34 3.23 6.38 6.38 0 0 0 5.65-1.4 6.38 6.38 0 0 0 4.36 1.23 6.55 6.55 0 0 0 4.34-3.23 6.38 6.38 0 0 0 2.25-4.63zm-9.35 12.35a4.74 4.74 0 0 1-2.9-1.01l.14-.08 4.83-2.79a.88.88 0 0 0 .44-.76v-6.8l2.03 1.17a.08.08 0 0 1 .05.06v5.62a4.76 4.76 0 0 1-4.59 4.59zM3.48 18.23a4.74 4.74 0 0 1-.68-3.01l.14.08 4.83 2.79a.88.88 0 0 0 .88 0l5.89-3.4v2.34a.08.08 0 0 1-.03.07l-4.87 2.81a4.76 4.76 0 0 1-6.16-1.67zm-1.42-9.6a4.74 4.74 0 0 1 2.22-2l.01.16v5.58a.88.88 0 0 0 .44.76l5.89 3.4-2.03 1.17a.08.08 0 0 1-.08 0L3.65 14.9a4.76 4.76 0 0 1-1.59-6.27zm16.59-3.45a4.74 4.74 0 0 1 .68 3.01l-.14-.08-4.83-2.79a.88.88 0 0 0-.88 0l-5.89 3.4V6.38a.08.08 0 0 1 .03-.07l4.87-2.81a4.76 4.76 0 0 1 6.16 1.67zm1.42 9.6a4.74 4.74 0 0 1-2.22 2l-.01-.16v-5.58a.88.88 0 0 0-.44-.76l-5.89-3.4 2.03-1.17a.08.08 0 0 1 .08 0l4.87 2.81a4.76 4.76 0 0 1 1.58 6.26zM8.31 12l2.76-1.59 2.76 1.59v3.19l-2.76 1.59-2.76-1.59z'/></svg>",
+      },
+      {
+        name: "Windsurf",
+        icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2309B6A6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12c3-3 6-3 9 0s6 3 9 0'/><path d='M2 17c3-3 6-3 9 0s6 3 9 0'/><path d='M2 7c3-3 6-3 9 0s6 3 9 0'/></svg>",
+      },
+      {
+        name: "Google ADK",
+        icon: "https://cdn.simpleicons.org/google/4285F4",
+      },
+      {
+        name: "Antigravity",
+        icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><circle cx='12' cy='12' r='9' stroke='%234285F4' stroke-width='2'/><path d='M12 3a9 9 0 0 1 9 9' stroke='%23EA4335' stroke-width='2.5'/><circle cx='12' cy='12' r='4' fill='%2334A853'/></svg>",
+      },
+      {
+        name: "Cursor",
+        icon: "https://cdn.simpleicons.org/cursor/007ACC",
+      },
+    ],
+  },
+  {
     title: "Programming Languages",
     items: [
       {

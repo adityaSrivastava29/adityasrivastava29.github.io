@@ -3,50 +3,137 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
-  --radius: 0.5rem;
+  --background: 36 44% 93%;
+  --foreground: 24 20% 14%;
+  --card: 37 36% 90%;
+  --card-foreground: 24 20% 14%;
+  --popover: 37 36% 90%;
+  --popover-foreground: 24 20% 14%;
+  --primary: 19 28% 28%;
+  --primary-foreground: 36 44% 97%;
+  --secondary: 37 20% 68%;
+  --secondary-foreground: 24 20% 14%;
+  --muted: 36 20% 85%;
+  --muted-foreground: 25 10% 40%;
+  --accent: 19 28% 28%;
+  --accent-foreground: 36 44% 97%;
+  --border: 35 25% 83%;
+  --input: 35 25% 83%;
+  --ring: 19 28% 28%;
+  --radius: 1.25rem;
 }
 
 .dark {
-  --background: 180 3% 8%;
-  --foreground: 180 5% 96%;
-  --card: 180 4% 10%;
-  --card-foreground: 180 5% 96%;
-  --popover: 180 4% 10%;
-  --popover-foreground: 180 5% 96%;
-  --primary: 175 70% 45%;
-  --primary-foreground: 180 10% 5%;
-  --secondary: 175 15% 18%;
-  --secondary-foreground: 180 5% 96%;
-  --muted: 175 12% 15%;
-  --muted-foreground: 175 8% 65%;
-  --accent: 165 85% 35%;
-  --accent-foreground: 180 5% 96%;
-  --destructive: 5 75% 50%;
-  --destructive-foreground: 180 5% 96%;
-  --border: 175 12% 20%;
-  --input: 175 12% 15%;
-  --ring: 175 70% 45%;
+  --background: 24 20% 10%;
+  --foreground: 36 44% 95%;
+  --card: 24 16% 15%;
+  --card-foreground: 36 44% 95%;
+  --popover: 24 16% 15%;
+  --popover-foreground: 36 44% 95%;
+  --primary: 36 61% 74%;
+  --primary-foreground: 24 20% 10%;
+  --secondary: 37 15% 25%;
+  --secondary-foreground: 36 44% 95%;
+  --muted: 24 12% 20%;
+  --muted-foreground: 36 15% 70%;
+  --accent: 36 61% 74%;
+  --accent-foreground: 24 20% 10%;
+  --border: 24 15% 22%;
+  --input: 24 15% 22%;
+  --ring: 36 61% 74%;
 }
 
 body {
-  @apply bg-background text-foreground antialiased;
+  background-color: #F7F0E6;
+  color: #2B231D;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.dark body,
+html.dark body {
+  background-color: #1A1412 !important;
+  color: #F4ECE3 !important;
+}
+
+h1, h2, h3, .font-serif, .font-display {
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+code, pre, .font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Terracotta Custom Classes */
+
+.terracotta-card {
+  background-color: #EFE6D8;
+  border: 1px solid #E2D6C5;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dark .terracotta-card,
+html.dark .terracotta-card {
+  background-color: #251E1A;
+  border-color: #382E28;
+}
+
+.terracotta-btn-primary {
+  background-color: #5C4033;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.terracotta-btn-primary:hover {
+  background-color: #4A3328;
+}
+
+.dark .terracotta-btn-primary,
+html.dark .terracotta-btn-primary {
+  background-color: #E6C594;
+  color: #2B231D;
+}
+
+.dark .terracotta-btn-primary:hover,
+html.dark .terracotta-btn-primary:hover {
+  background-color: #F5D6A0;
+}
+
+.terracotta-btn-secondary {
+  background-color: #B8AA94;
+  color: #2B231D;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dark .terracotta-btn-secondary,
+html.dark .terracotta-btn-secondary {
+  background-color: #3D322C;
+  color: #F4ECE3;
+}
+
+.dark .terracotta-btn-secondary:hover,
+html.dark .terracotta-btn-secondary:hover {
+  background-color: #4A3D36;
+}
+
+.terracotta-tag {
+  background-color: #E7DDCD;
+  color: #2B231D;
+  border-radius: 9999px;
+}
+
+.dark .terracotta-tag,
+html.dark .terracotta-tag {
+  background-color: #342A24;
+  color: #E8D4C8;
+  border-color: #42352E;
+}
+
+
