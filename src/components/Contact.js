@@ -10,14 +10,15 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    botcheck: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: type === "checkbox" ? (checked ? "true" : "") : value,
     }));
   };
 
@@ -26,19 +27,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/adityasri.in@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY || "5f4f0f35-b3dd-4f7c-b0b1-6c47c5902e66",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Inquiry from ${formData.name}`,
+          from_name: formData.name,
+          botcheck: formData.botcheck,
+        }),
+      });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
         trackContactSubmit(formData.email);
 
         toast.success(
@@ -56,13 +64,14 @@ const Contact = () => {
           name: "",
           email: "",
           message: "",
+          botcheck: "",
         });
       } else {
-        throw new Error("Failed to submit form");
+        throw new Error(data.message || "Failed to submit form");
       }
     } catch (error) {
       toast.error(
-        "Sorry, there was an error sending your message. Please try again later.",
+        error.message || "Sorry, there was an error sending your message. Please try again later.",
         {
           position: "top-right",
           autoClose: 5000,
@@ -180,6 +189,18 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot Spam Safeguard (Invisible to real users, traps automated bots) */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+                checked={!!formData.botcheck}
+                onChange={handleChange}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+
               <div>
                 <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#2B231D] dark:text-[#F4ECE3] mb-2 font-sans">
                   Your Name
