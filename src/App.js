@@ -28,7 +28,7 @@ function App() {
         </title>
         <meta
           name="description"
-          content="Aditya Kumar Srivastava — Java Full Stack Developer with 3.5+ years building enterprise-grade applications using Java, Spring Boot, React, PostgreSQL, Redis, and AWS. AWS Certified Developer."
+          content="Aditya Kumar Srivastava — Java Full Stack Developer with 4+ years building enterprise-grade applications using Java, Spring Boot, React, PostgreSQL, Redis, and AWS. AWS Certified Developer."
         />
         <meta
           name="keywords"
@@ -41,7 +41,7 @@ function App() {
         />
         <meta
           property="og:description"
-          content="Java Full Stack Developer specializing in Spring Boot, React, PostgreSQL & AWS. 3.5+ years of enterprise experience. Explore projects, skills & certifications."
+          content="Java Full Stack Developer specializing in Spring Boot, React, PostgreSQL & AWS. 4+ years of enterprise experience. Explore projects, skills & certifications."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adityasri.in" />
@@ -59,7 +59,7 @@ function App() {
         />
         <meta
           name="twitter:description"
-          content="Java Full Stack Developer with 3.5+ years in Spring Boot, React, PostgreSQL & AWS. View my portfolio."
+          content="Java Full Stack Developer with 4+ years in Spring Boot, React, PostgreSQL & AWS. View my portfolio."
         />
         <link rel="canonical" href="https://adityasri.in" />
         {/* SEO: Structured Data for Google */}
@@ -92,7 +92,7 @@ function App() {
               "@type": "CollegeOrUniversity",
               "name": "Noida Institute of Engineering and Technology"
             },
-            "description": "Aditya Kumar Srivastava is a Software Engineer and Java Full Stack Developer with 3.5+ years of experience delivering enterprise-grade applications using Java, Spring Boot, React, and PostgreSQL.",
+            "description": "Aditya Kumar Srivastava is a Software Engineer and Java Full Stack Developer with 4+ years of experience delivering enterprise-grade applications using Java, Spring Boot, React, and PostgreSQL.",
             "email": "adityasri.in@gmail.com"
           }
         `}</script>

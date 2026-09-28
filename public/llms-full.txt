@@ -89,7 +89,7 @@ Aditya is actively expanding his technical domain into AI engineering in Java, l
 **Duration**: September 2022 – June 2026  
 **Key Metrics & Achievements**:
 - **Application Scale**: Built and maintained 2+ production applications serving 100,000+ active users with 99.9% availability.
-- **API Performance**: Designed and implemented 25+ RESTful APIs using Spring Boot. Achieved a **40% reduction in response latency** by optimizing SQL queries and introducing Redis caching.
+- **API Performance**: Designed and implemented 25+ RESTful APIs using Spring Boot. Achieved a **27% reduction in response latency** by optimizing SQL queries and introducing Redis caching.
 - **Microservices & Event Processing**: Built event-driven microservices processing **2,000,000+ events per month** with Spring Boot and Redis distributed pub/sub caching.
 - **Database Load Reduction**: Implemented Redis cache-aside logic for high-traffic read operations, reducing database query load by **65%** and speeding up response times by **50%**.
 - **Frontend Integration**: Developed modular React.js frontends with Redux and TypeScript, connected to Spring Security backends utilizing JWT tokens and RBAC.

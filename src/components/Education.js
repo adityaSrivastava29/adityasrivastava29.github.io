@@ -8,7 +8,7 @@ const Education = () => {
       degree: "Bachelor of Technology in Computer Science & Engineering",
       institution: "Noida Institute of Engineering and Technology, Greater Noida",
       period: "August 2018 - August 2022",
-      details: "CGPA: 8.4 — Passed with Distinction",
+      details: "CGPA: 8.19 — Passed with Distinction",
       highlights: "Deep focus on Object-Oriented Programming, Data Structures & Algorithms, Database Management Systems, and Software Engineering."
     },
     {

@@ -15,7 +15,7 @@ export const experience = [
     period: "September 2022 - June 2026",
     bullets: [
       "Developed and delivered 2+ production full-stack applications using Spring Boot, React.js, PostgreSQL, and TypeScript, serving 100,000+ active users with 99.9% uptime.",
-      "Engineered 25+ RESTful APIs with Spring Boot/Spring MVC including authentication, validation, and error handling; achieved 40% improvement in response times via PostgreSQL query optimization and Redis caching.",
+      "Engineered 25+ RESTful APIs with Spring Boot/Spring MVC including authentication, validation, and error handling; achieved 27% improvement in response times via PostgreSQL query optimization and Redis caching.",
       "Built scalable microservices architecture with Spring Boot and Redis, processing 2M+ events monthly using event-driven design patterns and distributed caching.",
       "Implemented Redis caching layer for high-traffic endpoints, reducing database load by 65% and improving response times by 50%.",
       "Developed responsive React.js frontends with Redux state management and TypeScript, integrating seamlessly with Spring Boot backend APIs.",

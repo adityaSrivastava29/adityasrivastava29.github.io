@@ -121,7 +121,7 @@ const Blog = () => {
                 </li>
                 <li>
                   Optimized backend systems to deliver{" "}
-                  <strong>40% faster API response times</strong> using Redis
+                  <strong>27% faster API response times</strong> using Redis
                   caching and Query Tuning.
                 </li>
                 <li>
