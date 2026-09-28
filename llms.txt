@@ -16,7 +16,7 @@
 ## Summary / Bio
 Aditya Kumar Srivastava is a Full-Stack Java Developer and Software Engineer II with over 4 years of hands-on experience building, scaling, and maintaining high-performance enterprise web applications. He specializes in microservices architecture, RESTful API design, Redis caching, PostgreSQL database tuning, modern React.js frontend development, and cloud deployment on AWS.
 
-Currently, he serves as a Software Engineer II at CGM ARIA Health Services (CGM APEasy Team). Previously, he spent nearly 4 years at Cognizant Technology Solutions, where he engineered full-stack applications serving over 100,000 active users with 99.9% uptime, reduced API response times by 40%, and reduced CI/CD deployment times by 87%.
+Currently, he serves as a Software Engineer II at CGM ARIA Health Services (CGM APEasy Team). Previously, he spent nearly 4 years at Cognizant Technology Solutions, where he engineered full-stack applications serving over 100,000 active users with 99.9% uptime, reduced API response times by 27%, and reduced CI/CD deployment times by 87%.
 
 He holds certifications as an AWS Certified Developer – Associate, AWS Certified Cloud Practitioner, and GitHub Foundations, and is actively integrating AI/LLM capability into Java applications using Spring AI.
 
@@ -37,7 +37,7 @@ He holds certifications as an AWS Certified Developer – Associate, AWS Certifi
 ### Java Full Stack Developer — Cognizant Technology Solutions (Noida, India)
 *September 2022 – June 2026*
 - Developed 2+ production full-stack applications with Spring Boot, React.js, PostgreSQL, and TypeScript, serving 100,000+ users with 99.9% uptime.
-- Engineered 25+ Spring Boot RESTful APIs with authentication, validation, and optimized query execution, achieving a 40% improvement in response latency.
+- Engineered 25+ Spring Boot RESTful APIs with authentication, validation, and optimized query execution, achieving a 27% improvement in response latency.
 - Implemented Redis caching across high-traffic endpoints, decreasing database query load by 65% and improving endpoint speeds by 50%.
 - Architected event-driven microservices processing 2M+ events monthly using Spring Boot and distributed Redis caching.
 - Created responsive React.js frontends using Redux and TypeScript integrated with Spring Security backend authentication (JWT, OAuth2, RBAC).
