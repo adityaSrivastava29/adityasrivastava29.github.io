@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.004adaae.css",
-    "main.js": "/static/js/main.bd936e38.js",
+    "main.js": "/static/js/main.58aac0ce.js",
     "static/js/557.8eab546d.chunk.js": "/static/js/557.8eab546d.chunk.js",
     "static/js/889.709b05a9.chunk.js": "/static/js/889.709b05a9.chunk.js",
     "static/js/120.ca67b3bb.chunk.js": "/static/js/120.ca67b3bb.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/883.13a65473.chunk.js": "/static/js/883.13a65473.chunk.js",
     "static/js/886.5abe1b9c.chunk.js": "/static/js/886.5abe1b9c.chunk.js",
     "static/css/544.1de6ca14.chunk.css": "/static/css/544.1de6ca14.chunk.css",
-    "static/js/544.acdb01b7.chunk.js": "/static/js/544.acdb01b7.chunk.js",
+    "static/js/544.577cd680.chunk.js": "/static/js/544.577cd680.chunk.js",
     "static/media/github-foundations.png": "/static/media/github-foundations.7d5749c0be2c1342f215.png",
     "static/media/aditya-kumar-pic.jpeg": "/static/media/aditya-kumar-pic.3caa86ffeb2f671212fe.jpeg",
     "static/media/Aditya_kumar_Java_full_stack_developer_resume.pdf": "/static/media/Aditya_kumar_Java_full_stack_developer_resume.d0ec26a2d2b8d5cfea1f.pdf",
@@ -17,7 +17,7 @@
     "static/media/aws-ccp.png": "/static/media/aws-ccp.1d4d9fa250269a5b5067.png",
     "index.html": "/index.html",
     "main.004adaae.css.map": "/static/css/main.004adaae.css.map",
-    "main.bd936e38.js.map": "/static/js/main.bd936e38.js.map",
+    "main.58aac0ce.js.map": "/static/js/main.58aac0ce.js.map",
     "557.8eab546d.chunk.js.map": "/static/js/557.8eab546d.chunk.js.map",
     "889.709b05a9.chunk.js.map": "/static/js/889.709b05a9.chunk.js.map",
     "120.ca67b3bb.chunk.js.map": "/static/js/120.ca67b3bb.chunk.js.map",
@@ -25,10 +25,10 @@
     "883.13a65473.chunk.js.map": "/static/js/883.13a65473.chunk.js.map",
     "886.5abe1b9c.chunk.js.map": "/static/js/886.5abe1b9c.chunk.js.map",
     "544.1de6ca14.chunk.css.map": "/static/css/544.1de6ca14.chunk.css.map",
-    "544.acdb01b7.chunk.js.map": "/static/js/544.acdb01b7.chunk.js.map"
+    "544.577cd680.chunk.js.map": "/static/js/544.577cd680.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.004adaae.css",
-    "static/js/main.bd936e38.js"
+    "static/js/main.58aac0ce.js"
   ]
 }
