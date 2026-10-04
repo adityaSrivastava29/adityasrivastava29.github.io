@@ -1,7 +1,9 @@
 // src/lib/analytics.js
+import Clarity from '@microsoft/clarity';
 
 // Check if we are in production environment
 const isProd = process.env.NODE_ENV === 'production';
+const CLARITY_PROJECT_ID = process.env.REACT_APP_CLARITY_PROJECT_ID || 'ysivwks43m';
 
 /**
  * GA4 is initialized once in public/index.html with send_page_view:false.
@@ -10,6 +12,23 @@ const isProd = process.env.NODE_ENV === 'production';
 export const initGA = () => {
   if (!isProd) {
     console.log('[Analytics] Development Mode: GA4 Initialization skipped.');
+  }
+};
+
+/**
+ * Initialize Microsoft Clarity tracking
+ */
+export const initClarity = () => {
+  if (!isProd) {
+    console.log('[Analytics] Development Mode: Clarity Initialization skipped.');
+    return;
+  }
+  if (typeof window !== 'undefined' && CLARITY_PROJECT_ID) {
+    try {
+      Clarity.init(CLARITY_PROJECT_ID);
+    } catch (err) {
+      console.error('[Analytics] Failed to initialize Microsoft Clarity:', err);
+    }
   }
 };
 
@@ -42,8 +61,15 @@ export const trackEvent = (action, params = {}) => {
     console.log(`[Analytics] Event Tracked: ${action}`, params);
     return;
   }
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', action, params);
+  if (typeof window !== 'undefined') {
+    if (window.gtag) {
+      window.gtag('event', action, params);
+    }
+    try {
+      Clarity.event(action);
+    } catch (e) {
+      // Ignore clarity event errors in background
+    }
   }
 };
 
@@ -75,3 +101,5 @@ export const trackContactSubmit = (email = 'anonymous') => {
     event_label: 'Contact Form Submitted Successfully',
   });
 };
+
+export { Clarity };

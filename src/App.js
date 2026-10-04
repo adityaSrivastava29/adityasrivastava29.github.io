@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import { SkeletonGrid } from "./components/ui/skeleton";
-import { trackPageView } from "./lib/analytics";
+import { trackPageView, initClarity } from "./lib/analytics";
 import "./index.css";
 const Experience = React.lazy(() => import("./components/Experience"));
 const Blog = React.lazy(() => import("./components/Blog"));
@@ -17,6 +17,7 @@ const Contact = React.lazy(() => import("./components/Contact"));
 
 function App() {
   useEffect(() => {
+    initClarity();
     trackPageView();
   }, []);
   return (

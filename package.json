@@ -5,6 +5,7 @@
   "homepage": "https://adityasri.in",
   "main": "index.js",
   "dependencies": {
+    "@microsoft/clarity": "^1.0.2",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.14",
