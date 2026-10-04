@@ -19,13 +19,10 @@ export const initGA = () => {
  * Initialize Microsoft Clarity tracking
  */
 export const initClarity = () => {
-  if (!isProd) {
-    console.log('[Analytics] Development Mode: Clarity Initialization skipped.');
-    return;
-  }
   if (typeof window !== 'undefined' && CLARITY_PROJECT_ID) {
     try {
       Clarity.init(CLARITY_PROJECT_ID);
+      console.log(`[Analytics] Microsoft Clarity initialized (${CLARITY_PROJECT_ID})`);
     } catch (err) {
       console.error('[Analytics] Failed to initialize Microsoft Clarity:', err);
     }
