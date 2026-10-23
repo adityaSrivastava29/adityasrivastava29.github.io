@@ -37,7 +37,7 @@ export const experience = [
     title: "Software Engineer Intern",
     company: "Apisero, Noida",
     companyLink: "https://www.linkedin.com/company/apisero/home/",
-    period: "August 2022 - October 2022",
+    period: "August 2021 - October 2021",
     bullets: [],
   },
 ];
